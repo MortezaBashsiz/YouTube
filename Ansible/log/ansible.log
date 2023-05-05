@@ -1,0 +1,314 @@
+2023-05-05 08:36:09,129 p=10216 u=morteza n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: atlanta
+
+2023-05-05 08:36:09,129 p=10216 u=morteza n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2023-05-05 08:36:19,662 p=10221 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+2023-05-05 08:36:22,234 p=10221 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+2023-05-05 08:36:24,610 p=10221 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+2023-05-05 08:36:27,255 p=10221 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+2023-05-05 08:36:31,848 p=10308 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+2023-05-05 08:36:31,871 p=10308 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+2023-05-05 08:36:31,883 p=10308 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+2023-05-05 08:36:32,012 p=10308 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+2023-05-05 08:36:50,355 p=10383 u=morteza n=ansible | app1.sudoer.net | FAILED | rc=1 >>
+cat: invalid option -- 'i'
+Try 'cat --help' for more information.non-zero return code
+
+2023-05-05 08:36:50,376 p=10383 u=morteza n=ansible | db.sudoer.net | FAILED | rc=1 >>
+cat: invalid option -- 'i'
+Try 'cat --help' for more information.non-zero return code
+
+2023-05-05 08:36:50,414 p=10383 u=morteza n=ansible | app2.sudoer.net | FAILED | rc=1 >>
+cat: invalid option -- 'i'
+Try 'cat --help' for more information.non-zero return code
+
+2023-05-05 08:36:50,424 p=10383 u=morteza n=ansible | lb.sudoer.net | FAILED | rc=1 >>
+cat: invalid option -- 'i'
+Try 'cat --help' for more information.non-zero return code
+
+2023-05-05 08:37:12,393 p=10429 u=morteza n=ansible | app1.sudoer.net | FAILED | rc=1 >>
+non-zero return code
+
+2023-05-05 08:37:12,406 p=10429 u=morteza n=ansible | lb.sudoer.net | FAILED | rc=1 >>
+non-zero return code
+
+2023-05-05 08:37:12,418 p=10429 u=morteza n=ansible | db.sudoer.net | FAILED | rc=1 >>
+non-zero return code
+
+2023-05-05 08:37:12,550 p=10429 u=morteza n=ansible | app2.sudoer.net | FAILED | rc=1 >>
+non-zero return code
+
+2023-05-05 08:37:36,195 p=10476 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_CODENAME=bullseye
+
+2023-05-05 08:37:36,195 p=10476 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_CODENAME=bullseye
+
+2023-05-05 08:37:36,199 p=10476 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_CODENAME=bullseye
+
+2023-05-05 08:37:36,223 p=10476 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_CODENAME=bullseye
+
+2023-05-05 08:37:58,646 p=10521 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 08:37:58,663 p=10521 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 08:37:58,675 p=10521 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 08:37:58,719 p=10521 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 08:38:09,009 p=10595 u=morteza n=ansible | app1.sudoer.net | FAILED | rc=1 >>
+non-zero return code
+
+2023-05-05 08:38:09,022 p=10595 u=morteza n=ansible | lb.sudoer.net | FAILED | rc=1 >>
+non-zero return code
+
+2023-05-05 08:38:09,050 p=10595 u=morteza n=ansible | db.sudoer.net | FAILED | rc=1 >>
+non-zero return code
+
+2023-05-05 08:38:09,063 p=10595 u=morteza n=ansible | app2.sudoer.net | FAILED | rc=1 >>
+non-zero return code
+
+2023-05-05 08:38:16,691 p=10640 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 08:38:16,720 p=10640 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 08:38:16,742 p=10640 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 08:38:16,757 p=10640 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:07:10,099 p=13722 u=morteza n=ansible | [WARNING]: Unable to parse /home/morteza/data/YouTube/Ansible/src/ansible/inventory/maina.yml as an inventory source
+
+2023-05-05 09:07:10,099 p=13722 u=morteza n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-05-05 09:07:10,104 p=13722 u=morteza n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-05-05 09:07:39,214 p=13774 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:07:39,221 p=13774 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:07:39,258 p=13774 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:07:39,338 p=13774 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:08:11,605 p=13885 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:08:11,651 p=13885 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:08:11,674 p=13885 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:08:11,674 p=13885 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:09:22,906 p=14036 u=morteza n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: adas
+
+2023-05-05 09:09:22,906 p=14036 u=morteza n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2023-05-05 09:09:41,584 p=14085 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:09:41,680 p=14085 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:09:53,652 p=14130 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:10:06,736 p=14155 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:10:32,426 p=14203 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:10:32,434 p=14203 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:10:32,473 p=14203 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:10:32,581 p=14203 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:11:01,562 p=14339 u=morteza n=ansible | app3.sudoer.net | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname app3.sudoer.net: Name or service not known",
+    "unreachable": true
+}
+2023-05-05 09:11:02,501 p=14339 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:11:02,516 p=14339 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:11:02,532 p=14339 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:11:02,688 p=14339 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:11:51,672 p=14463 u=morteza n=ansible | lb.sudoer.net | FAILED | rc=2 >>
+grep: /etc/os-releasea: No such file or directorynon-zero return code
+
+2023-05-05 09:11:51,693 p=14463 u=morteza n=ansible | app1.sudoer.net | FAILED | rc=2 >>
+grep: /etc/os-releasea: No such file or directorynon-zero return code
+
+2023-05-05 09:11:51,710 p=14463 u=morteza n=ansible | db.sudoer.net | FAILED | rc=2 >>
+grep: /etc/os-releasea: No such file or directorynon-zero return code
+
+2023-05-05 09:11:51,765 p=14463 u=morteza n=ansible | app2.sudoer.net | FAILED | rc=2 >>
+grep: /etc/os-releasea: No such file or directorynon-zero return code
+
+2023-05-05 09:12:24,852 p=14537 u=morteza n=ansible | app1.sudoer.net | FAILED | rc=2 >>
+grep: /etc/os-releasea: No such file or directorynon-zero return code
+
+2023-05-05 09:12:24,858 p=14537 u=morteza n=ansible | db.sudoer.net | FAILED | rc=2 >>
+grep: /etc/os-releasea: No such file or directorynon-zero return code
+
+2023-05-05 09:12:24,911 p=14537 u=morteza n=ansible | lb.sudoer.net | FAILED | rc=2 >>
+grep: /etc/os-releasea: No such file or directorynon-zero return code
+
+2023-05-05 09:12:24,912 p=14537 u=morteza n=ansible | app2.sudoer.net | FAILED | rc=2 >>
+grep: /etc/os-releasea: No such file or directorynon-zero return code
+
+2023-05-05 09:12:30,596 p=14594 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:12:30,596 p=14594 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:12:30,600 p=14594 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:12:30,604 p=14594 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:13:00,208 p=14696 u=morteza n=ansible | [WARNING]:  * Failed to parse /home/morteza/data/YouTube/Ansible/src/ansible/inventory/main.yml with auto plugin: We were unable to read either as JSON nor
+YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   did not find expected key
+The error appears to be in '/home/morteza/data/YouTube/Ansible/src/ansible/inventory/main.yml': line 13, column 2, but may be elsewhere in the file depending
+on the exact syntax problem.  The offending line appears to be:      app1.sudoer.net:  app2.sudoer.net:  ^ here
+
+2023-05-05 09:13:00,209 p=14696 u=morteza n=ansible | [WARNING]:  * Failed to parse /home/morteza/data/YouTube/Ansible/src/ansible/inventory/main.yml with yaml plugin: We were unable to read either as JSON nor
+YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 1 (char 0)  Syntax Error while loading YAML.   did not find expected key
+The error appears to be in '/home/morteza/data/YouTube/Ansible/src/ansible/inventory/main.yml': line 13, column 2, but may be elsewhere in the file depending
+on the exact syntax problem.  The offending line appears to be:      app1.sudoer.net:  app2.sudoer.net:  ^ here
+
+2023-05-05 09:13:00,209 p=14696 u=morteza n=ansible | [WARNING]:  * Failed to parse /home/morteza/data/YouTube/Ansible/src/ansible/inventory/main.yml with ini plugin: Invalid host pattern '---' supplied, '---'
+is normally a sign this is a YAML file.
+
+2023-05-05 09:13:00,209 p=14696 u=morteza n=ansible | [WARNING]: Unable to parse /home/morteza/data/YouTube/Ansible/src/ansible/inventory/main.yml as an inventory source
+
+2023-05-05 09:13:00,210 p=14696 u=morteza n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-05-05 09:13:00,214 p=14696 u=morteza n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2023-05-05 09:13:00,215 p=14696 u=morteza n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: app
+
+2023-05-05 09:13:44,869 p=14784 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-05 09:13:44,873 p=14784 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+

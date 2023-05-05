@@ -1,0 +1,22 @@
+---
+
+all:
+  hosts:
+    lb.sudoer.net:
+    db.sudoer.net:
+    app1.sudoer.net:
+    app2.sudoer.net:
+
+app:
+  hosts:
+    app1.sudoer.net:
+    app2.sudoer.net:
+
+db:
+  hosts:
+    db.sudoer.net:
+
+lb:
+  hosts:
+    lb.sudoer.net:
+
