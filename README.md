@@ -1,5 +1,5 @@
 # My YouTube
-Here I decided to list all my youtube trainings here
+Here I decided to list all my [YouTube](https://www.youtube.com/@MortezaBashsiz "YouTube") trainings.
 
-# Ansible
-The Repo of Ansible is here [HERE](https://github.com/MortezaBashsiz/YouTube/tree/main/Ansible "HERE").
+
+- The Repo of [Ansible](https://github.com/MortezaBashsiz/YouTube/tree/main/Ansible "Ansible").
