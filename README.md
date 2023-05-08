@@ -1,10 +1,11 @@
 # My YouTube
-Here I decided to list all my [YouTube](https://www.youtube.com/@MortezaBashsiz "YouTube") trainings.
 
+Here, I decided to list all my [YouTube](https://www.youtube.com/@MortezaBashsiz "YouTube") training.
 
-- The Repo of [Ansible](https://github.com/MortezaBashsiz/YouTube/tree/main/Ansible "Ansible").
+## Projects and Trainings Repository
 
-- The Repo of Linux Course [HERE](https://github.com/MortezaBashsiz/YouTube/tree/main/Linux-Course "HERE").
+- [Ansible](https://github.com/MortezaBashsiz/YouTube/tree/main/Ansible "Ansible")
 
-- The Repo of Linux System Engineering [HERE](https://github.com/MortezaBashsiz/YouTube/tree/main/Linux-System-Engineering "HERE").
+- [Linux Course](https://github.com/MortezaBashsiz/YouTube/tree/main/Linux-Course "Linux Course")
 
+- [Linux System Engineering](https://github.com/MortezaBashsiz/YouTube/tree/main/Linux-System-Engineering "Linux System Engineering")
