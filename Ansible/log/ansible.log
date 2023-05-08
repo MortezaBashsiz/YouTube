@@ -312,3 +312,15 @@ NAME="Debian GNU/Linux"
 2023-05-05 09:13:44,873 p=14784 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
 NAME="Debian GNU/Linux"
 
+2023-05-08 08:00:04,981 p=49145 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-08 08:00:04,996 p=49145 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-08 08:00:04,999 p=49145 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-08 08:00:05,096 p=49145 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
