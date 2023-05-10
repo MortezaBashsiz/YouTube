@@ -324,3 +324,174 @@ NAME="Debian GNU/Linux"
 2023-05-08 08:00:05,096 p=49145 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
 NAME="Debian GNU/Linux"
 
+2023-05-10 08:22:58,075 p=241100 u=morteza n=ansible | app1.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-10 08:22:58,089 p=241100 u=morteza n=ansible | db.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-10 08:22:58,161 p=241100 u=morteza n=ansible | lb.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-10 08:22:58,192 p=241100 u=morteza n=ansible | app2.sudoer.net | CHANGED | rc=0 >>
+NAME="Debian GNU/Linux"
+
+2023-05-10 08:36:53,594 p=242310 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-10 08:36:53,603 p=242310 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-10 08:36:56,566 p=242310 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:36:56,851 p=242310 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-10 08:36:57,828 p=242310 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:36:57,849 p=242310 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-10 08:36:57,894 p=242310 u=morteza n=ansible | TASK [default : Install git] *********************************************************************************************************************************
+2023-05-10 08:36:59,426 p=242310 u=morteza n=ansible | fatal: [app1.sudoer.net]: FAILED! => {"changed": false, "msg": "No package matching 'git' is available"}
+2023-05-10 08:36:59,463 p=242310 u=morteza n=ansible | fatal: [lb.sudoer.net]: FAILED! => {"changed": false, "msg": "No package matching 'git' is available"}
+2023-05-10 08:36:59,892 p=242310 u=morteza n=ansible | fatal: [app2.sudoer.net]: FAILED! => {"changed": false, "msg": "No package matching 'git' is available"}
+2023-05-10 08:37:07,681 p=242310 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-05-10 08:37:07,706 p=242310 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-10 08:37:07,707 p=242310 u=morteza n=ansible | app1.sudoer.net            : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:37:07,707 p=242310 u=morteza n=ansible | app2.sudoer.net            : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:37:07,707 p=242310 u=morteza n=ansible | db.sudoer.net              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:37:07,707 p=242310 u=morteza n=ansible | lb.sudoer.net              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:39:26,774 p=242590 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-10 08:39:26,783 p=242590 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-10 08:39:29,316 p=242590 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-10 08:39:29,350 p=242590 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:39:29,477 p=242590 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:39:29,496 p=242590 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-10 08:39:29,543 p=242590 u=morteza n=ansible | TASK [default : Install git] *********************************************************************************************************************************
+2023-05-10 08:39:30,671 p=242590 u=morteza n=ansible | fatal: [app1.sudoer.net]: FAILED! => {"changed": false, "msg": "No package matching 'git' is available"}
+2023-05-10 08:39:30,950 p=242590 u=morteza n=ansible | fatal: [app2.sudoer.net]: FAILED! => {"changed": false, "msg": "No package matching 'git' is available"}
+2023-05-10 08:39:31,249 p=242590 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:39:38,527 p=242590 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-05-10 08:39:38,583 p=242590 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-10 08:39:38,583 p=242590 u=morteza n=ansible | app1.sudoer.net            : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:39:38,583 p=242590 u=morteza n=ansible | app2.sudoer.net            : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:39:38,583 p=242590 u=morteza n=ansible | db.sudoer.net              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:39:38,583 p=242590 u=morteza n=ansible | lb.sudoer.net              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:40:57,705 p=242775 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-10 08:40:57,714 p=242775 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-10 08:41:00,391 p=242775 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-10 08:41:00,396 p=242775 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:41:00,507 p=242775 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:41:00,529 p=242775 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-10 08:41:00,570 p=242775 u=morteza n=ansible | TASK [default : Install git] *********************************************************************************************************************************
+2023-05-10 08:41:01,718 p=242775 u=morteza n=ansible | fatal: [app1.sudoer.net]: FAILED! => {"changed": false, "msg": "No package matching 'git' is available"}
+2023-05-10 08:41:01,908 p=242775 u=morteza n=ansible | fatal: [app2.sudoer.net]: FAILED! => {"changed": false, "msg": "No package matching 'git' is available"}
+2023-05-10 08:41:02,278 p=242775 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:41:02,323 p=242775 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:41:02,380 p=242775 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-10 08:41:02,380 p=242775 u=morteza n=ansible | app1.sudoer.net            : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:41:02,380 p=242775 u=morteza n=ansible | app2.sudoer.net            : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:41:02,381 p=242775 u=morteza n=ansible | db.sudoer.net              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:41:02,381 p=242775 u=morteza n=ansible | lb.sudoer.net              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:41:31,583 p=242949 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-10 08:41:31,593 p=242949 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-10 08:41:33,815 p=242949 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-10 08:41:33,881 p=242949 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:41:33,887 p=242949 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:41:34,121 p=242949 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-10 08:41:34,163 p=242949 u=morteza n=ansible | TASK [default : Install git] *********************************************************************************************************************************
+2023-05-10 08:41:36,972 p=242949 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:41:38,106 p=242949 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:41:49,748 p=242949 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-05-10 08:41:53,401 p=242949 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-05-10 08:41:53,504 p=242949 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-10 08:41:53,504 p=242949 u=morteza n=ansible | app1.sudoer.net            : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:41:53,504 p=242949 u=morteza n=ansible | app2.sudoer.net            : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:41:53,504 p=242949 u=morteza n=ansible | db.sudoer.net              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:41:53,504 p=242949 u=morteza n=ansible | lb.sudoer.net              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:41:58,918 p=243062 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-10 08:41:58,928 p=243062 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-10 08:42:01,672 p=243062 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-10 08:42:01,679 p=243062 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:42:01,692 p=243062 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:42:01,841 p=243062 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-10 08:42:01,888 p=243062 u=morteza n=ansible | TASK [default : Install git] *********************************************************************************************************************************
+2023-05-10 08:42:04,794 p=243062 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:42:05,083 p=243062 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-10 08:42:05,125 p=243062 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:42:05,396 p=243062 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-10 08:42:05,519 p=243062 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-10 08:42:05,519 p=243062 u=morteza n=ansible | app1.sudoer.net            : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:42:05,519 p=243062 u=morteza n=ansible | app2.sudoer.net            : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:42:05,519 p=243062 u=morteza n=ansible | db.sudoer.net              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:42:05,519 p=243062 u=morteza n=ansible | lb.sudoer.net              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:44:06,409 p=243321 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-10 08:44:06,419 p=243321 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-10 08:44:08,944 p=243321 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-10 08:44:09,010 p=243321 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:44:09,247 p=243321 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-10 08:44:09,896 p=243321 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:44:09,949 p=243321 u=morteza n=ansible | TASK [default : Install git] *********************************************************************************************************************************
+2023-05-10 08:44:12,813 p=243321 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-10 08:44:12,966 p=243321 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:44:13,149 p=243321 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:44:13,150 p=243321 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-10 08:44:13,155 p=243321 u=morteza n=ansible | TASK [default : Install sysstat] *****************************************************************************************************************************
+2023-05-10 08:44:20,941 p=243321 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-05-10 08:44:21,352 p=243321 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-05-10 08:44:22,014 p=243321 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-05-10 08:44:22,634 p=243321 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-05-10 08:44:22,731 p=243321 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-10 08:44:22,731 p=243321 u=morteza n=ansible | app1.sudoer.net            : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:44:22,731 p=243321 u=morteza n=ansible | app2.sudoer.net            : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:44:22,731 p=243321 u=morteza n=ansible | db.sudoer.net              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:44:22,731 p=243321 u=morteza n=ansible | lb.sudoer.net              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:47:53,991 p=243898 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-10 08:47:54,000 p=243898 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-10 08:47:56,928 p=243898 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-10 08:47:57,006 p=243898 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:47:57,046 p=243898 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:47:57,106 p=243898 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-10 08:47:57,158 p=243898 u=morteza n=ansible | TASK [default : Install git] *********************************************************************************************************************************
+2023-05-10 08:48:00,187 p=243898 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-10 08:48:00,451 p=243898 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:48:00,481 p=243898 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:48:00,783 p=243898 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-10 08:48:00,799 p=243898 u=morteza n=ansible | TASK [default : Install sysstat] *****************************************************************************************************************************
+2023-05-10 08:48:03,365 p=243898 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-10 08:48:03,628 p=243898 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:48:03,816 p=243898 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:48:03,919 p=243898 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-10 08:48:03,927 p=243898 u=morteza n=ansible | TASK [default : Install packages] ****************************************************************************************************************************
+2023-05-10 08:48:06,656 p=243898 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=git)
+2023-05-10 08:48:06,879 p=243898 u=morteza n=ansible | ok: [db.sudoer.net] => (item=git)
+2023-05-10 08:48:07,097 p=243898 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=git)
+2023-05-10 08:48:07,148 p=243898 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=git)
+2023-05-10 08:48:09,304 p=243898 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=sysstat)
+2023-05-10 08:48:09,670 p=243898 u=morteza n=ansible | ok: [db.sudoer.net] => (item=sysstat)
+2023-05-10 08:48:09,804 p=243898 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=sysstat)
+2023-05-10 08:48:10,471 p=243898 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=sysstat)
+2023-05-10 08:48:10,568 p=243898 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-10 08:48:10,568 p=243898 u=morteza n=ansible | app1.sudoer.net            : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:48:10,568 p=243898 u=morteza n=ansible | app2.sudoer.net            : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:48:10,568 p=243898 u=morteza n=ansible | db.sudoer.net              : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:48:10,568 p=243898 u=morteza n=ansible | lb.sudoer.net              : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:49:26,465 p=244183 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-10 08:49:26,474 p=244183 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-10 08:49:28,746 p=244183 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-10 08:49:29,708 p=244183 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-10 08:49:29,788 p=244183 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-10 08:49:33,818 p=244183 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-10 08:49:33,868 p=244183 u=morteza n=ansible | TASK [default : Install packages] ****************************************************************************************************************************
+2023-05-10 08:49:36,365 p=244183 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=git)
+2023-05-10 08:49:36,792 p=244183 u=morteza n=ansible | ok: [db.sudoer.net] => (item=git)
+2023-05-10 08:49:36,899 p=244183 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=git)
+2023-05-10 08:49:37,005 p=244183 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=git)
+2023-05-10 08:49:38,451 p=244183 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=sysstat)
+2023-05-10 08:49:39,274 p=244183 u=morteza n=ansible | ok: [db.sudoer.net] => (item=sysstat)
+2023-05-10 08:49:39,284 p=244183 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=sysstat)
+2023-05-10 08:49:39,458 p=244183 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=sysstat)
+2023-05-10 08:49:40,608 p=244183 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=htop)
+2023-05-10 08:49:41,793 p=244183 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=htop)
+2023-05-10 08:49:41,844 p=244183 u=morteza n=ansible | ok: [db.sudoer.net] => (item=htop)
+2023-05-10 08:49:42,315 p=244183 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=htop)
+2023-05-10 08:49:44,381 p=244183 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=tcpdump)
+2023-05-10 08:49:45,732 p=244183 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=tcpdump)
+2023-05-10 08:49:46,013 p=244183 u=morteza n=ansible | changed: [db.sudoer.net] => (item=tcpdump)
+2023-05-10 08:49:46,908 p=244183 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=tcpdump)
+2023-05-10 08:49:47,011 p=244183 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-10 08:49:47,011 p=244183 u=morteza n=ansible | app1.sudoer.net            : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:49:47,011 p=244183 u=morteza n=ansible | app2.sudoer.net            : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:49:47,011 p=244183 u=morteza n=ansible | db.sudoer.net              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-10 08:49:47,011 p=244183 u=morteza n=ansible | lb.sudoer.net              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

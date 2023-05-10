@@ -1,0 +1,6 @@
+---
+
+- name: default actions on all hosts
+  hosts: all
+  roles:
+    - default

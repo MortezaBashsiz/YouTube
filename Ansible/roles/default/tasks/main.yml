@@ -1,0 +1,12 @@
+---
+
+- name: Install packages
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop:
+    - git
+    - sysstat
+    - htop
+    - tcpdump
