@@ -11,10 +11,18 @@ The [Ansible Playlist](https://www.youtube.com/playlist?list=PLRMCwJJwWR1AKYcUkd
    </br>
    - host_vars
    - group_vars
-6. [Practical Scenario]( https://youtu.be/lfDUFURKqKk "Practical Scenario")
+6. [Practical Scenario - part 1]( https://youtu.be/lfDUFURKqKk "Practical Scenario - part 1")
    </br>
    - Defining scenario
    - Creating inventory file and ansible.cfg
    - Talking about differences between running command and using modules in ansible
    - Start working with ansible command.
-
+7. [Practical Scenario - part 2]( https://youtu.be/DSWx3Ow0HnM "Practical Scenario - part 2")
+   </br>
+   - Defining role
+   - Logic behind loops
+   - Check output and log
+8. [Practical Scenario - part 3]( https://youtu.be/_zZ9xwQZgoE "Practical Scenario - part 3")
+   </br>
+   - Why we should use modules
+   - Ansible doc
