@@ -10,3 +10,11 @@
     - sysstat
     - htop
     - tcpdump
+    - lftp
+
+- name: Create Directory
+  file:
+    state: directory
+    path: "/tmp/nokhod"
+
+
