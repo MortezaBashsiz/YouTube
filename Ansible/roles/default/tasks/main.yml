@@ -1,20 +1,26 @@
 ---
 
-- name: Install packages
-  apt:
-    name: "{{ item }}"
-    state: present
-    update_cache: yes
-  loop:
-    - git
-    - sysstat
-    - htop
-    - tcpdump
-    - lftp
+#- name: Install packages
+#  apt:
+#    name: "{{ item }}"
+#    state: present
+#    update_cache: yes
+#  loop:
+#    - git
+#    - sysstat
+#    - htop
+#    - tcpdump
+#    - lftp
+#
+#- name: Create Directory
+#  file:
+#    state: directory
+#    path: "/tmp/nokhod"
 
-- name: Create Directory
-  file:
-    state: directory
-    path: "/tmp/nokhod"
+- name: echo variable to file
+  shell: |
+    echo {{ VARIABLE }} > /tmp/nokhod/VARIABLE_FILE
 
-
+- name: print variable
+  debug:
+    msg: "{{ VARIABLE }}"

@@ -26,3 +26,6 @@ The [Ansible Playlist](https://www.youtube.com/playlist?list=PLRMCwJJwWR1AKYcUkd
    </br>
    - Why we should use modules
    - Ansible doc
+9. [Practical Scenario - part 4]( https://youtu.be/a0rPdcOTUEE "Practical Scenario - part 4")
+   </br>
+   - Variables
