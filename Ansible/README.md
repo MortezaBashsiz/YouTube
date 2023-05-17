@@ -29,3 +29,8 @@ The [Ansible Playlist](https://www.youtube.com/playlist?list=PLRMCwJJwWR1AKYcUkd
 9. [Practical Scenario - part 4]( https://youtu.be/a0rPdcOTUEE "Practical Scenario - part 4")
    </br>
    - Variables
+9. [Practical Scenario - part 5]( https://youtu.be/HT5vL2vK4yc "Practical Scenario - part 5")
+   </br>
+   - files
+   - limits
+   - list hosts
