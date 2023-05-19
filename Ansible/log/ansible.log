@@ -1229,3 +1229,148 @@
     pattern: ['all']
     hosts (1):
       lb.sudoer.net
+2023-05-19 08:48:49,033 p=410964 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-19 08:48:49,044 p=410964 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-19 08:48:51,701 p=410964 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-19 08:48:51,731 p=410964 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-19 08:48:51,743 p=410964 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-19 08:48:51,769 p=410964 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-19 08:48:51,823 p=410964 u=morteza n=ansible | TASK [default : Template arsenal] ****************************************************************************************************************************
+2023-05-19 08:48:53,724 p=410964 u=morteza n=ansible | fatal: [app2.sudoer.net]: FAILED! => {"changed": false, "checksum": "ce8b9711388bd220831987cda9153e2301a19c55", "msg": "Destination directory /var/arsenal/conf does not exist"}
+2023-05-19 08:48:53,742 p=410964 u=morteza n=ansible | fatal: [db.sudoer.net]: FAILED! => {"changed": false, "checksum": "87efd8e12f23c39af9df0ee5f420aef96672d55b", "msg": "Destination directory /var/arsenal/conf does not exist"}
+2023-05-19 08:48:53,742 p=410964 u=morteza n=ansible | fatal: [lb.sudoer.net]: FAILED! => {"changed": false, "checksum": "b7c919bb946cfb19e5cc38fcc8512e982606c43d", "msg": "Destination directory /var/arsenal/conf does not exist"}
+2023-05-19 08:48:53,818 p=410964 u=morteza n=ansible | fatal: [app1.sudoer.net]: FAILED! => {"changed": false, "checksum": "57999c7f387ea01eae53a9242daef5d5006f54c9", "msg": "Destination directory /var/arsenal/conf does not exist"}
+2023-05-19 08:48:53,820 p=410964 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-19 08:48:53,820 p=410964 u=morteza n=ansible | app1.sudoer.net            : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-19 08:48:53,820 p=410964 u=morteza n=ansible | app2.sudoer.net            : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-19 08:48:53,820 p=410964 u=morteza n=ansible | db.sudoer.net              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-19 08:48:53,820 p=410964 u=morteza n=ansible | lb.sudoer.net              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-19 08:50:19,693 p=411252 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-19 08:50:19,708 p=411252 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-19 08:50:22,400 p=411252 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-19 08:50:22,468 p=411252 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-19 08:50:22,604 p=411252 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-19 08:50:22,626 p=411252 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-19 08:50:22,672 p=411252 u=morteza n=ansible | TASK [default : Create Directory arsenal] ********************************************************************************************************************
+2023-05-19 08:50:23,633 p=411252 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 08:50:23,636 p=411252 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 08:50:23,673 p=411252 u=morteza n=ansible | changed: [db.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 08:50:23,699 p=411252 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 08:50:24,387 p=411252 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 08:50:24,414 p=411252 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 08:50:24,440 p=411252 u=morteza n=ansible | changed: [db.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 08:50:24,501 p=411252 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 08:50:24,512 p=411252 u=morteza n=ansible | TASK [default : Template arsenal] ****************************************************************************************************************************
+2023-05-19 08:50:26,329 p=411252 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-05-19 08:50:26,378 p=411252 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-05-19 08:50:26,426 p=411252 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-05-19 08:50:26,693 p=411252 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-05-19 08:50:26,803 p=411252 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-19 08:50:26,803 p=411252 u=morteza n=ansible | app1.sudoer.net            : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 08:50:26,803 p=411252 u=morteza n=ansible | app2.sudoer.net            : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 08:50:26,803 p=411252 u=morteza n=ansible | db.sudoer.net              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 08:50:26,803 p=411252 u=morteza n=ansible | lb.sudoer.net              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 08:57:51,889 p=412327 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-19 08:57:51,899 p=412327 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-19 08:57:54,467 p=412327 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-19 08:57:54,529 p=412327 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-19 08:57:54,661 p=412327 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-19 08:57:54,769 p=412327 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-19 08:57:54,822 p=412327 u=morteza n=ansible | TASK [default : Create Directory arsenal] ********************************************************************************************************************
+2023-05-19 08:57:55,801 p=412327 u=morteza n=ansible | ok: [db.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 08:57:55,817 p=412327 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 08:57:55,825 p=412327 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 08:57:55,841 p=412327 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 08:57:56,590 p=412327 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 08:57:56,616 p=412327 u=morteza n=ansible | ok: [db.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 08:57:56,640 p=412327 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 08:57:56,651 p=412327 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 08:57:56,661 p=412327 u=morteza n=ansible | TASK [default : Template arsenal] ****************************************************************************************************************************
+2023-05-19 08:57:58,635 p=412327 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-05-19 08:57:58,657 p=412327 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-05-19 08:57:58,680 p=412327 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-05-19 08:57:58,699 p=412327 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-05-19 08:57:58,799 p=412327 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-19 08:57:58,800 p=412327 u=morteza n=ansible | app1.sudoer.net            : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 08:57:58,800 p=412327 u=morteza n=ansible | app2.sudoer.net            : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 08:57:58,800 p=412327 u=morteza n=ansible | db.sudoer.net              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 08:57:58,800 p=412327 u=morteza n=ansible | lb.sudoer.net              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 09:01:22,648 p=412941 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-19 09:01:22,661 p=412941 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-19 09:01:25,130 p=412941 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-19 09:01:25,174 p=412941 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-19 09:01:25,228 p=412941 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-19 09:01:25,319 p=412941 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-19 09:01:25,367 p=412941 u=morteza n=ansible | TASK [default : Create Directory arsenal] ********************************************************************************************************************
+2023-05-19 09:01:26,359 p=412941 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 09:01:26,369 p=412941 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 09:01:26,379 p=412941 u=morteza n=ansible | ok: [db.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 09:01:26,466 p=412941 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 09:01:27,096 p=412941 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 09:01:27,099 p=412941 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 09:01:27,135 p=412941 u=morteza n=ansible | ok: [db.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 09:01:27,248 p=412941 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 09:01:27,261 p=412941 u=morteza n=ansible | TASK [default : Template arsenal] ****************************************************************************************************************************
+2023-05-19 09:01:27,384 p=412941 u=morteza n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'list_var' is undefined. 'list_var' is undefined
+2023-05-19 09:01:27,384 p=412941 u=morteza n=ansible | fatal: [lb.sudoer.net]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'list_var' is undefined. 'list_var' is undefined"}
+2023-05-19 09:01:27,400 p=412941 u=morteza n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'list_var' is undefined. 'list_var' is undefined
+2023-05-19 09:01:27,400 p=412941 u=morteza n=ansible | fatal: [db.sudoer.net]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'list_var' is undefined. 'list_var' is undefined"}
+2023-05-19 09:01:27,405 p=412941 u=morteza n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'list_var' is undefined. 'list_var' is undefined
+2023-05-19 09:01:27,405 p=412941 u=morteza n=ansible | fatal: [app1.sudoer.net]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'list_var' is undefined. 'list_var' is undefined"}
+2023-05-19 09:01:27,420 p=412941 u=morteza n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'list_var' is undefined. 'list_var' is undefined
+2023-05-19 09:01:27,420 p=412941 u=morteza n=ansible | fatal: [app2.sudoer.net]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'list_var' is undefined. 'list_var' is undefined"}
+2023-05-19 09:01:27,421 p=412941 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-19 09:01:27,421 p=412941 u=morteza n=ansible | app1.sudoer.net            : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-19 09:01:27,421 p=412941 u=morteza n=ansible | app2.sudoer.net            : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-19 09:01:27,421 p=412941 u=morteza n=ansible | db.sudoer.net              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-19 09:01:27,422 p=412941 u=morteza n=ansible | lb.sudoer.net              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-19 09:01:53,809 p=413137 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-19 09:01:53,820 p=413137 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-19 09:01:55,929 p=413137 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-19 09:01:55,957 p=413137 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-19 09:01:56,060 p=413137 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-19 09:01:56,122 p=413137 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-19 09:01:56,168 p=413137 u=morteza n=ansible | TASK [default : Create Directory arsenal] ********************************************************************************************************************
+2023-05-19 09:01:57,213 p=413137 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 09:01:57,216 p=413137 u=morteza n=ansible | ok: [db.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 09:01:57,232 p=413137 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 09:01:57,342 p=413137 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 09:01:58,053 p=413137 u=morteza n=ansible | ok: [db.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 09:01:58,057 p=413137 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 09:01:58,075 p=413137 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 09:01:58,267 p=413137 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 09:01:58,280 p=413137 u=morteza n=ansible | TASK [default : Template arsenal] ****************************************************************************************************************************
+2023-05-19 09:02:00,304 p=413137 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-05-19 09:02:00,310 p=413137 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-05-19 09:02:00,316 p=413137 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-05-19 09:02:00,340 p=413137 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-05-19 09:02:00,437 p=413137 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-19 09:02:00,437 p=413137 u=morteza n=ansible | app1.sudoer.net            : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 09:02:00,437 p=413137 u=morteza n=ansible | app2.sudoer.net            : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 09:02:00,437 p=413137 u=morteza n=ansible | db.sudoer.net              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 09:02:00,437 p=413137 u=morteza n=ansible | lb.sudoer.net              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 09:05:22,123 p=413860 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-19 09:05:22,137 p=413860 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-19 09:05:24,866 p=413860 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-19 09:05:24,908 p=413860 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-19 09:05:24,951 p=413860 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-19 09:05:25,028 p=413860 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-19 09:05:25,072 p=413860 u=morteza n=ansible | TASK [default : Create Directory arsenal] ********************************************************************************************************************
+2023-05-19 09:05:25,970 p=413860 u=morteza n=ansible | ok: [db.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 09:05:26,020 p=413860 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 09:05:26,024 p=413860 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 09:05:26,118 p=413860 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-19 09:05:26,683 p=413860 u=morteza n=ansible | ok: [db.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 09:05:26,732 p=413860 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 09:05:26,771 p=413860 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 09:05:26,901 p=413860 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-19 09:05:26,912 p=413860 u=morteza n=ansible | TASK [default : Template arsenal] ****************************************************************************************************************************
+2023-05-19 09:05:28,919 p=413860 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-05-19 09:05:28,963 p=413860 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-05-19 09:05:28,964 p=413860 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-05-19 09:05:28,967 p=413860 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-05-19 09:05:29,064 p=413860 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-19 09:05:29,064 p=413860 u=morteza n=ansible | app1.sudoer.net            : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 09:05:29,064 p=413860 u=morteza n=ansible | app2.sudoer.net            : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 09:05:29,065 p=413860 u=morteza n=ansible | db.sudoer.net              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-19 09:05:29,065 p=413860 u=morteza n=ansible | lb.sudoer.net              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

@@ -1,1 +1,7 @@
 VARIABLE: "DB HOST VARS"
+
+
+LISTVAR:
+  - db_list1
+  - db_list2
+  - db_list3

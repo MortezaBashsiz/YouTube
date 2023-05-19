@@ -1,1 +1,6 @@
 VARIABLE: "APP1 HOST VARS"
+
+LISTVAR:
+  - app1_list1
+  - app1_list2
+  - app1_list3

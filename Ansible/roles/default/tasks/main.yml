@@ -1,56 +1,67 @@
 ---
 
-- name: Install packages
-  apt:
-    name: "{{ item }}"
-    state: present
-    update_cache: yes
-  loop:
-    - git
-    - sysstat
-    - htop
-    - tcpdump
-    - lftp
+#- name: Install packages
+#  apt:
+#    name: "{{ item }}"
+#    state: present
+#    update_cache: yes
+#  loop:
+#    - git
+#    - sysstat
+#    - htop
+#    - tcpdump
+#    - lftp
+#
+#- name: Create Directory
+#  file:
+#    state: directory
+#    path: "/tmp/nokhod"
+#
+#- name: echo variable to file
+#  shell: |
+#    echo {{ VARIABLE }} > /tmp/nokhod/VARIABLE_FILE
+#
+#- name: print variable
+#  debug:
+#    msg: "{{ VARIABLE }}"
+#
+#- name: Create Directory /var/temp/bin/
+#  file:
+#    state: directory
+#    path: "{{ item }}"
+#  loop:
+#    - "/var/temp/bin/"
+#    - "/var/temp/conf/"
+#
+#- name: Copy temp.sh
+#  copy:
+#    src: var/temp/bin/temp.sh
+#    dest: /var/temp/bin/temp.sh
+#    mode: 0754
+#
+#- name: Copy temp.sh backup
+#  copy:
+#    src: /var/temp/bin/temp.sh
+#    dest: /var/temp/bin/temp.sh-back
+#    mode: 0644
+#    remote_src: yes
+#
+#- name: Copy temp.conf
+#  copy:
+#    src: var/temp/conf/temp.conf
+#    dest: /var/temp/conf/
+#    mode: 0640
 
-- name: Create Directory
-  file:
-    state: directory
-    path: "/tmp/nokhod"
-
-- name: echo variable to file
-  shell: |
-    echo {{ VARIABLE }} > /tmp/nokhod/VARIABLE_FILE
-
-- name: print variable
-  debug:
-    msg: "{{ VARIABLE }}"
-
-- name: Create Directory /var/temp/bin/
+- name: Create Directory arsenal
   file:
     state: directory
     path: "{{ item }}"
   loop:
-    - "/var/temp/bin/"
-    - "/var/temp/conf/"
+    - "/var/arsenal/bin/"
+    - "/var/arsenal/conf/"
 
-- name: Copy temp.sh
-  copy:
-    src: var/temp/bin/temp.sh
-    dest: /var/temp/bin/temp.sh
-    mode: 0754
-
-- name: Copy temp.sh backup
-  copy:
-    src: /var/temp/bin/temp.sh
-    dest: /var/temp/bin/temp.sh-back
-    mode: 0644
-    remote_src: yes
-
-- name: Copy temp.conf
-  copy:
-    src: var/temp/conf/temp.conf
-    dest: /var/temp/conf/
-    mode: 0640
-
-
+- name: Template arsenal
+  template:
+    src: var/arsenal/conf/arsenal.conf
+    dest: /var/arsenal/conf/arsenal.conf
 

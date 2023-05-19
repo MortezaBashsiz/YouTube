@@ -1,1 +1,7 @@
-#VARIABLE: "LB HOST VARS"
+VARIABLE: "LB HOST VARS"
+
+
+LISTVAR:
+  - lb_list1
+  - lb_list2
+  - lb_list3
