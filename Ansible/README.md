@@ -30,11 +30,10 @@ The [Ansible Playlist](https://www.youtube.com/playlist?list=PLRMCwJJwWR1AKYcUkd
    </br>
    - Variables
 10. [Practical Scenario - part 5]( https://youtu.be/HT5vL2vK4yc "Practical Scenario - part 5")
-   </br>
-   - files
-   - limits
-   - list hosts
-
+    </br>
+    - files
+    - limits
+    - list hosts
 11. [Practical Scenario - part 6]( https://youtu.be/Lo2sQS8pUJE "Practical Scenario - part 6")
     </br>
     - templates
