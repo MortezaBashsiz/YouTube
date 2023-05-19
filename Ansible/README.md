@@ -34,6 +34,7 @@ The [Ansible Playlist](https://www.youtube.com/playlist?list=PLRMCwJJwWR1AKYcUkd
    - files
    - limits
    - list hosts
+
 11. [Practical Scenario - part 6]( https://youtu.be/Lo2sQS8pUJE "Practical Scenario - part 6")
    </br>
    - templates
