@@ -38,3 +38,6 @@ The [Ansible Playlist](https://www.youtube.com/playlist?list=PLRMCwJJwWR1AKYcUkd
     </br>
     - templates
     - jinja
+12. [Practical Scenario - part 7]( https://youtu.be/qGl_BfbMCm8 "Practical Scenario - part 7")
+    </br>
+    - ansible_facts
