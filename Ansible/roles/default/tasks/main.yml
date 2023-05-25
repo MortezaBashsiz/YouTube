@@ -11,11 +11,16 @@
     - htop
     - tcpdump
     - lftp
+  tags:
+    - install
+    - packages
 
 - name: Create Directory
   file:
     state: directory
     path: "/tmp/nokhod"
+  tags:
+    - config
 
 - name: echo variable to file
   shell: |
@@ -24,6 +29,8 @@
 - name: print variable
   debug:
     msg: "{{ VARIABLE }}"
+  tags:
+    - config
 
 - name: Create Directory /var/temp/bin/
   file:
@@ -38,6 +45,8 @@
     src: var/temp/bin/temp.sh
     dest: /var/temp/bin/temp.sh
     mode: 0754
+  tags:
+    - config
 
 - name: Copy temp.sh backup
   copy:
@@ -45,12 +54,16 @@
     dest: /var/temp/bin/temp.sh-back
     mode: 0644
     remote_src: yes
+  tags:
+    - config
 
 - name: Copy temp.conf
   copy:
     src: var/temp/conf/temp.conf
     dest: /var/temp/conf/
     mode: 0640
+  tags:
+    - config
 
 - name: facts 
   debug:

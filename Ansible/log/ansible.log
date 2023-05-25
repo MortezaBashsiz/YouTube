@@ -3110,3 +3110,235 @@
 2023-05-23 09:26:42,031 p=514073 u=morteza n=ansible | app2.sudoer.net            : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2023-05-23 09:26:42,031 p=514073 u=morteza n=ansible | db.sudoer.net              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2023-05-23 09:26:42,031 p=514073 u=morteza n=ansible | lb.sudoer.net              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:10:00,440 p=108865 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-25 09:10:00,450 p=108865 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-25 09:10:03,164 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-25 09:10:03,319 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-25 09:10:03,465 p=108865 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:10:03,525 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-25 09:10:03,571 p=108865 u=morteza n=ansible | TASK [default : Install packages] ****************************************************************************************************************************
+2023-05-25 09:10:06,208 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=git)
+2023-05-25 09:10:06,497 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=git)
+2023-05-25 09:10:06,536 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=git)
+2023-05-25 09:10:06,552 p=108865 u=morteza n=ansible | ok: [db.sudoer.net] => (item=git)
+2023-05-25 09:10:08,393 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=sysstat)
+2023-05-25 09:10:08,931 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=sysstat)
+2023-05-25 09:10:09,032 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=sysstat)
+2023-05-25 09:10:09,626 p=108865 u=morteza n=ansible | ok: [db.sudoer.net] => (item=sysstat)
+2023-05-25 09:10:10,524 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=htop)
+2023-05-25 09:10:11,475 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=htop)
+2023-05-25 09:10:11,505 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=htop)
+2023-05-25 09:10:12,359 p=108865 u=morteza n=ansible | ok: [db.sudoer.net] => (item=htop)
+2023-05-25 09:10:12,675 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=tcpdump)
+2023-05-25 09:10:13,813 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=tcpdump)
+2023-05-25 09:10:14,180 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=tcpdump)
+2023-05-25 09:10:14,734 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=lftp)
+2023-05-25 09:10:14,949 p=108865 u=morteza n=ansible | ok: [db.sudoer.net] => (item=tcpdump)
+2023-05-25 09:10:16,212 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=lftp)
+2023-05-25 09:10:16,506 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=lftp)
+2023-05-25 09:10:17,362 p=108865 u=morteza n=ansible | ok: [db.sudoer.net] => (item=lftp)
+2023-05-25 09:10:17,371 p=108865 u=morteza n=ansible | TASK [default : Create Directory] ****************************************************************************************************************************
+2023-05-25 09:10:18,299 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-25 09:10:18,307 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-25 09:10:18,310 p=108865 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:10:18,357 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-25 09:10:18,366 p=108865 u=morteza n=ansible | TASK [default : echo variable to file] ***********************************************************************************************************************
+2023-05-25 09:10:19,270 p=108865 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-05-25 09:10:19,274 p=108865 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-05-25 09:10:19,325 p=108865 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-05-25 09:10:19,414 p=108865 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-05-25 09:10:19,423 p=108865 u=morteza n=ansible | TASK [default : print variable] ******************************************************************************************************************************
+2023-05-25 09:10:19,452 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net] => {
+    "msg": "LB HOST VARS"
+}
+2023-05-25 09:10:19,464 p=108865 u=morteza n=ansible | ok: [db.sudoer.net] => {
+    "msg": "DB HOST VARS"
+}
+2023-05-25 09:10:19,466 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net] => {
+    "msg": "APP1 HOST VARS"
+}
+2023-05-25 09:10:19,477 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net] => {
+    "msg": "APP2 HOST VARS"
+}
+2023-05-25 09:10:19,484 p=108865 u=morteza n=ansible | TASK [default : Create Directory /var/temp/bin/] *************************************************************************************************************
+2023-05-25 09:10:20,364 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/var/temp/bin/)
+2023-05-25 09:10:20,377 p=108865 u=morteza n=ansible | ok: [db.sudoer.net] => (item=/var/temp/bin/)
+2023-05-25 09:10:20,395 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/var/temp/bin/)
+2023-05-25 09:10:20,413 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/var/temp/bin/)
+2023-05-25 09:10:21,071 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/var/temp/conf/)
+2023-05-25 09:10:21,107 p=108865 u=morteza n=ansible | ok: [db.sudoer.net] => (item=/var/temp/conf/)
+2023-05-25 09:10:21,163 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/var/temp/conf/)
+2023-05-25 09:10:21,178 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/var/temp/conf/)
+2023-05-25 09:10:21,186 p=108865 u=morteza n=ansible | TASK [default : Copy temp.sh] ********************************************************************************************************************************
+2023-05-25 09:10:22,605 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-25 09:10:22,692 p=108865 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:10:22,766 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-25 09:10:22,855 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-25 09:10:22,862 p=108865 u=morteza n=ansible | TASK [default : Copy temp.sh backup] *************************************************************************************************************************
+2023-05-25 09:10:23,812 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-25 09:10:23,822 p=108865 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:10:23,838 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-25 09:10:23,855 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-25 09:10:23,862 p=108865 u=morteza n=ansible | TASK [default : Copy temp.conf] ******************************************************************************************************************************
+2023-05-25 09:10:25,369 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-25 09:10:25,391 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-25 09:10:25,393 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-25 09:10:25,449 p=108865 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:10:25,467 p=108865 u=morteza n=ansible | TASK [default : facts] ***************************************************************************************************************************************
+2023-05-25 09:10:25,498 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net] => {
+    "msg": "162.55.55.78"
+}
+2023-05-25 09:10:25,512 p=108865 u=morteza n=ansible | ok: [db.sudoer.net] => {
+    "msg": "5.75.169.12"
+}
+2023-05-25 09:10:25,514 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net] => {
+    "msg": "78.47.70.96"
+}
+2023-05-25 09:10:25,524 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net] => {
+    "msg": "116.203.31.182"
+}
+2023-05-25 09:10:25,531 p=108865 u=morteza n=ansible | TASK [default : Create Directory arsenal] ********************************************************************************************************************
+2023-05-25 09:10:26,354 p=108865 u=morteza n=ansible | ok: [db.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-25 09:10:26,355 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-25 09:10:26,368 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-25 09:10:26,381 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/var/arsenal/bin/)
+2023-05-25 09:10:27,166 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-25 09:10:27,206 p=108865 u=morteza n=ansible | ok: [db.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-25 09:10:27,210 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-25 09:10:27,219 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/var/arsenal/conf/)
+2023-05-25 09:10:27,229 p=108865 u=morteza n=ansible | TASK [default : Template arsenal] ****************************************************************************************************************************
+2023-05-25 09:10:28,668 p=108865 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-25 09:10:28,703 p=108865 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-25 09:10:28,755 p=108865 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:10:28,800 p=108865 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-25 09:10:28,895 p=108865 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-25 09:10:28,895 p=108865 u=morteza n=ansible | app1.sudoer.net            : ok=12   changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:10:28,895 p=108865 u=morteza n=ansible | app2.sudoer.net            : ok=12   changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:10:28,895 p=108865 u=morteza n=ansible | db.sudoer.net              : ok=12   changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:10:28,895 p=108865 u=morteza n=ansible | lb.sudoer.net              : ok=12   changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:11:28,049 p=109580 u=morteza n=ansible | playbook: playbooks/default.yml
+2023-05-25 09:11:28,049 p=109580 u=morteza n=ansible |   play #1 (all): default actions on all hosts	TAGS: []
+2023-05-25 09:11:28,051 p=109580 u=morteza n=ansible |       TASK TAGS: [install, packages]
+
+2023-05-25 09:11:45,056 p=109603 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-25 09:11:45,065 p=109603 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-25 09:11:47,720 p=109603 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-25 09:11:47,763 p=109603 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-25 09:11:47,823 p=109603 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:11:47,914 p=109603 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-25 09:11:47,967 p=109603 u=morteza n=ansible | TASK [default : Install packages] ****************************************************************************************************************************
+2023-05-25 09:11:50,587 p=109603 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=git)
+2023-05-25 09:11:50,706 p=109603 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=git)
+2023-05-25 09:11:50,948 p=109603 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=git)
+2023-05-25 09:11:51,305 p=109603 u=morteza n=ansible | ok: [db.sudoer.net] => (item=git)
+2023-05-25 09:11:52,721 p=109603 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=sysstat)
+2023-05-25 09:11:53,199 p=109603 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=sysstat)
+2023-05-25 09:11:53,488 p=109603 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=sysstat)
+2023-05-25 09:11:54,172 p=109603 u=morteza n=ansible | ok: [db.sudoer.net] => (item=sysstat)
+2023-05-25 09:11:55,100 p=109603 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=htop)
+2023-05-25 09:11:55,480 p=109603 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=htop)
+2023-05-25 09:11:56,110 p=109603 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=htop)
+2023-05-25 09:11:56,761 p=109603 u=morteza n=ansible | ok: [db.sudoer.net] => (item=htop)
+2023-05-25 09:11:57,278 p=109603 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=tcpdump)
+2023-05-25 09:11:57,816 p=109603 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=tcpdump)
+2023-05-25 09:11:58,789 p=109603 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=tcpdump)
+2023-05-25 09:11:59,292 p=109603 u=morteza n=ansible | ok: [db.sudoer.net] => (item=tcpdump)
+2023-05-25 09:11:59,392 p=109603 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=lftp)
+2023-05-25 09:12:00,039 p=109603 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=lftp)
+2023-05-25 09:12:01,334 p=109603 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=lftp)
+2023-05-25 09:12:01,756 p=109603 u=morteza n=ansible | ok: [db.sudoer.net] => (item=lftp)
+2023-05-25 09:12:01,870 p=109603 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-25 09:12:01,870 p=109603 u=morteza n=ansible | app1.sudoer.net            : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:12:01,870 p=109603 u=morteza n=ansible | app2.sudoer.net            : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:12:01,870 p=109603 u=morteza n=ansible | db.sudoer.net              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:12:01,870 p=109603 u=morteza n=ansible | lb.sudoer.net              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:13:06,303 p=109925 u=morteza n=ansible | playbook: playbooks/default.yml
+2023-05-25 09:13:06,304 p=109925 u=morteza n=ansible |   play #1 (all): default actions on all hosts	TAGS: []
+2023-05-25 09:13:06,306 p=109925 u=morteza n=ansible |       TASK TAGS: [config, install, packages]
+
+2023-05-25 09:13:13,960 p=109937 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-25 09:13:13,974 p=109937 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-25 09:13:16,637 p=109937 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-25 09:13:16,641 p=109937 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-25 09:13:16,866 p=109937 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-25 09:13:16,874 p=109937 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:13:16,920 p=109937 u=morteza n=ansible | TASK [default : Create Directory] ****************************************************************************************************************************
+2023-05-25 09:13:17,798 p=109937 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-25 09:13:17,813 p=109937 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-25 09:13:17,817 p=109937 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:13:17,969 p=109937 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-25 09:13:17,974 p=109937 u=morteza n=ansible | TASK [default : print variable] ******************************************************************************************************************************
+2023-05-25 09:13:18,002 p=109937 u=morteza n=ansible | ok: [lb.sudoer.net] => {
+    "msg": "LB HOST VARS"
+}
+2023-05-25 09:13:18,015 p=109937 u=morteza n=ansible | ok: [db.sudoer.net] => {
+    "msg": "DB HOST VARS"
+}
+2023-05-25 09:13:18,017 p=109937 u=morteza n=ansible | ok: [app1.sudoer.net] => {
+    "msg": "APP1 HOST VARS"
+}
+2023-05-25 09:13:18,027 p=109937 u=morteza n=ansible | ok: [app2.sudoer.net] => {
+    "msg": "APP2 HOST VARS"
+}
+2023-05-25 09:13:18,034 p=109937 u=morteza n=ansible | TASK [default : Copy temp.sh backup] *************************************************************************************************************************
+2023-05-25 09:13:19,021 p=109937 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-25 09:13:19,103 p=109937 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-25 09:13:19,129 p=109937 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:13:19,492 p=109937 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-25 09:13:19,500 p=109937 u=morteza n=ansible | TASK [default : Copy temp.conf] ******************************************************************************************************************************
+2023-05-25 09:13:20,953 p=109937 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-05-25 09:13:20,993 p=109937 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-05-25 09:13:21,080 p=109937 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:13:21,214 p=109937 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-05-25 09:13:21,319 p=109937 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-25 09:13:21,319 p=109937 u=morteza n=ansible | app1.sudoer.net            : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:13:21,319 p=109937 u=morteza n=ansible | app2.sudoer.net            : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:13:21,320 p=109937 u=morteza n=ansible | db.sudoer.net              : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:13:21,320 p=109937 u=morteza n=ansible | lb.sudoer.net              : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:14:55,248 p=110299 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-25 09:14:55,262 p=110299 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-25 09:14:57,445 p=110299 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:14:57,466 p=110299 u=morteza n=ansible | TASK [default : Create Directory] ****************************************************************************************************************************
+2023-05-25 09:14:58,227 p=110299 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:14:58,240 p=110299 u=morteza n=ansible | TASK [default : print variable] ******************************************************************************************************************************
+2023-05-25 09:14:58,258 p=110299 u=morteza n=ansible | ok: [db.sudoer.net] => {
+    "msg": "DB HOST VARS"
+}
+2023-05-25 09:14:58,266 p=110299 u=morteza n=ansible | TASK [default : Copy temp.sh backup] *************************************************************************************************************************
+2023-05-25 09:14:59,122 p=110299 u=morteza n=ansible | fatal: [db.sudoer.net]: FAILED! => {"changed": false, "msg": "Source /var/temp/bin/temp.sh not found"}
+2023-05-25 09:14:59,124 p=110299 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-25 09:14:59,124 p=110299 u=morteza n=ansible | db.sudoer.net              : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:15:39,422 p=110426 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-25 09:15:39,436 p=110426 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-25 09:15:41,355 p=110426 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:15:41,380 p=110426 u=morteza n=ansible | TASK [default : Create Directory] ****************************************************************************************************************************
+2023-05-25 09:15:42,180 p=110426 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:15:42,192 p=110426 u=morteza n=ansible | TASK [default : print variable] ******************************************************************************************************************************
+2023-05-25 09:15:42,213 p=110426 u=morteza n=ansible | ok: [db.sudoer.net] => {
+    "msg": "DB HOST VARS"
+}
+2023-05-25 09:15:42,221 p=110426 u=morteza n=ansible | TASK [default : Copy temp.sh] ********************************************************************************************************************************
+2023-05-25 09:15:43,903 p=110426 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-05-25 09:15:43,910 p=110426 u=morteza n=ansible | TASK [default : Copy temp.sh backup] *************************************************************************************************************************
+2023-05-25 09:15:44,562 p=110426 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:15:44,576 p=110426 u=morteza n=ansible | TASK [default : Copy temp.conf] ******************************************************************************************************************************
+2023-05-25 09:15:45,868 p=110426 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:15:45,893 p=110426 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-25 09:15:45,893 p=110426 u=morteza n=ansible | db.sudoer.net              : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-05-25 09:17:10,756 p=110643 u=morteza n=ansible | PLAY [default actions on all hosts] **************************************************************************************************************************
+2023-05-25 09:17:10,768 p=110643 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-05-25 09:17:12,961 p=110643 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:17:12,985 p=110643 u=morteza n=ansible | TASK [default : Create Directory] ****************************************************************************************************************************
+2023-05-25 09:17:13,791 p=110643 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:17:13,800 p=110643 u=morteza n=ansible | TASK [default : print variable] ******************************************************************************************************************************
+2023-05-25 09:17:13,821 p=110643 u=morteza n=ansible | ok: [db.sudoer.net] => {
+    "msg": "DB HOST VARS"
+}
+2023-05-25 09:17:13,829 p=110643 u=morteza n=ansible | TASK [default : Copy temp.sh] ********************************************************************************************************************************
+2023-05-25 09:17:15,149 p=110643 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:17:15,155 p=110643 u=morteza n=ansible | TASK [default : Copy temp.sh backup] *************************************************************************************************************************
+2023-05-25 09:17:15,922 p=110643 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:17:15,932 p=110643 u=morteza n=ansible | TASK [default : Copy temp.conf] ******************************************************************************************************************************
+2023-05-25 09:17:17,143 p=110643 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-05-25 09:17:17,177 p=110643 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-05-25 09:17:17,177 p=110643 u=morteza n=ansible | db.sudoer.net              : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
