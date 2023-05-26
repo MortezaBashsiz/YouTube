@@ -118,7 +118,7 @@ all:
 ## Show Inventory in Graph 
 
 ```
-ansible-inventory -i main.yml --graph 
+ansible-inventory -i inventory/main.yml --graph 
 ```
 
 ```
@@ -136,7 +136,7 @@ ansible-inventory -i main.yml --graph
 ## Show a specific host attributes and variables
 
 ```
-ansible-inventory -i main.yml --host db.sudoer.net
+ansible-inventory -i inventory/main.yml --host db.sudoer.net
 ```
 
 ```json
