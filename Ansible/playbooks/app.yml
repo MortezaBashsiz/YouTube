@@ -1,0 +1,20 @@
+---
+
+- hosts: app
+  roles:
+    - role: iptables
+      tags:
+        - firewall
+        - iptables
+    - role: fail2ban
+      tags:
+        - fail2ban
+    - role: nginx
+      tags:
+        - nginx
+    - role: php-fpm
+      tags:
+        - php
+    - role: wordpress
+      tags:
+        - wordpress

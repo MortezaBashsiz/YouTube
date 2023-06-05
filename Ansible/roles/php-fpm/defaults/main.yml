@@ -1,0 +1,6 @@
+---
+
+PHP74FPM_PKGS_LIST:
+  - php7.4-fpm
+  - php7.4-mysql
+  - php7.4-gd

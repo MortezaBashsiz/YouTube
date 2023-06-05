@@ -1,0 +1,18 @@
+---
+
+- name: Install the latest version packages
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+  loop:
+    - "{{ PHP74FPM_PKGS_LIST }}"
+  tags:
+    - pkg
+
+- name: Update all packages
+  apt:
+    name: "*"
+    state: latest
+  tags:
+    - pkg

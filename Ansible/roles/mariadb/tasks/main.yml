@@ -1,0 +1,88 @@
+---
+
+- name: set sysctl
+  sysctl:
+    name: "{{ item.name }}"
+    value: "{{ item.value  }}"
+    sysctl_set: true
+    state: present
+    reload: true
+    sysctl_file: /etc/sysctl.d/99-sysctl.conf 
+  with_items:
+    - "{{ MARIADB_SYSCTL_LIST }}"
+
+- name: Install the latest version packages
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+  loop:
+    - "{{ MARIADB_PKGS_LIST }}"
+  tags:
+    - pkg
+
+- name: Update all packages
+  apt:
+    name: "*"
+    state: latest
+  tags:
+    - pkg
+
+- name: check if config file exist
+  stat:
+    path: /root/.my.cnf
+  register: config_file
+
+- name: Generate mysql root pass
+  set_fact:
+    MARIADB_ROOT_PASS: "{{ lookup('ansible.builtin.password', '/dev/null chars=ascii_uppercase,ascii_lowercase,digits length=16') }}"
+  when: not config_file.stat.exists
+
+- name: Removes anonymous users
+  mysql_user:
+    name: ''
+    host: "{{ item }}" 
+    state: absent
+    login_unix_socket: /run/mysqld/mysqld.sock
+  with_items:
+    - 127.0.0.1
+    - localhost
+
+- name: mysql .my.cnf {{ instance.name }}
+  template:
+    src: root/my.cnf.j2
+    dest: /root/.my.cnf
+    owner: root
+    group: root
+    mode: '0600'
+  when: not config_file.stat.exists
+
+- name: Update MariaDB root password
+  mysql_user: 
+    name: root 
+    host: "{{ item }}" 
+    password: "{{ MARIADB_ROOT_PASS }}"
+  with_items:
+    - 127.0.0.1
+    - localhost
+  when: not config_file.stat.exists
+
+- name: mysql .my.cnf {{ user.name }}
+  template:
+    src: etc/mysql/mariadb.conf.d/50-server.cnf
+    dest: /etc/mysql/mariadb.conf.d/50-server.cnf
+    owner: root
+    group: root
+    mode: '0600'
+
+- name: configuring instances
+  include_tasks: database.yml
+  loop: "{{ DB_INSTANCES }}"
+  loop_control:
+    loop_var: instance
+
+- name: configuring users
+  include_tasks: users.yml
+  loop: "{{ DB_USERS }}"
+  loop_control:
+    loop_var: user

@@ -1,0 +1,14 @@
+---
+
+- hosts: db
+  roles:
+    - role: iptables
+      tags:
+        - firewall
+        - iptables
+    - role: fail2ban
+      tags:
+        - fail2ban
+    - role: mariadb
+      tags:
+        - mariadb

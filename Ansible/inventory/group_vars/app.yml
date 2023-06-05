@@ -1,0 +1,46 @@
+---
+
+INPUT_CHAINS:
+  - name: "INPUT_SSH"
+    policy: "ACCEPT"
+    rules:
+      - "-s 0.0.0.0/0 -p tcp --dport 22 -j ACCEPT"
+  - name: "INPUT_WEB"
+    policy: "ACCEPT"
+    rules:
+      - "-s 0.0.0.0/0 -p tcp --dport 80 -j ACCEPT"
+      - "-s 0.0.0.0/0 -p tcp --dport 443 -j ACCEPT"
+
+OUTPUT_CHAINS:
+  - name: "OUTPUT_WEB"
+    policy: "ACCEPT"
+    rules:
+      - "-d 0.0.0.0/0 -p tcp --dport 80 -j ACCEPT"
+      - "-d 0.0.0.0/0 -p tcp --dport 443 -j ACCEPT"
+  - name: "OUTPUT_SSH"
+    policy: "ACCEPT"
+    rules:
+      - "-d 0.0.0.0/0 -p tcp --dport 22 -j ACCEPT"
+  - name: "OUTPUT_DB"
+    policy: "ACCEPT"
+    rules:
+      - "-d 0.0.0.0/0 -p tcp --dport 3306 -j ACCEPT"
+
+FORWARD_CHAINS:
+  - name: "FORWARD_DEFAULT"
+    policy: "DROP"
+    rules:
+      - "-s 0.0.0.0/0 -d 0.0.0.0/0 -j DROP"
+
+NGINX_INSTANCES:
+  - domain: app.sudoer.net
+    email: morteza.bashsiz@gmail.com
+    root: /home/www-data/app.sudoer.net/www/wordpress
+
+WP_INSTANCES:
+  - name: app.sudoer.net
+    db: sudoer_net
+    db_user: sudoer_user
+    db_host: db.sudoer.net
+    db_charset: utf8
+
