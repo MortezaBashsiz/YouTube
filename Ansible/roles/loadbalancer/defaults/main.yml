@@ -1,0 +1,6 @@
+---
+
+NGINX_PKGS_LIST:
+  - nginx
+  - certbot 
+  - python3-certbot-nginx

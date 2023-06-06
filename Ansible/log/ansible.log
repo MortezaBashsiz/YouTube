@@ -1490,3 +1490,1217 @@ include: db.yml
 2023-06-05 17:57:18,692 p=165484 u=morteza n=ansible | app1.sudoer.net            : ok=25   changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
 2023-06-05 17:57:18,692 p=165484 u=morteza n=ansible | app2.sudoer.net            : ok=25   changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
 2023-06-05 17:57:18,692 p=165484 u=morteza n=ansible | db.sudoer.net              : ok=20   changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2023-06-06 07:56:05,569 p=198186 u=morteza n=ansible | PLAY [lb] ****************************************************************************************************************************************************
+2023-06-06 07:56:05,580 p=198186 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 07:56:08,317 p=198186 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 07:56:08,335 p=198186 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 07:56:22,625 p=198186 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 07:56:22,644 p=198186 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 07:56:28,037 p=198186 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 07:56:28,057 p=198186 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 07:56:29,320 p=198186 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 07:56:29,332 p=198186 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 07:56:31,178 p=198186 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 07:56:31,195 p=198186 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 07:56:32,045 p=198186 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 07:56:32,070 p=198186 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 07:56:33,470 p=198186 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=setup.sh)
+2023-06-06 07:56:34,864 p=198186 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=config)
+2023-06-06 07:56:34,905 p=198186 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 07:56:41,000 p=198186 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=['fail2ban'])
+2023-06-06 07:56:41,014 p=198186 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 07:56:44,748 p=198186 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 07:56:44,767 p=198186 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 07:56:46,265 p=198186 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 07:56:46,290 p=198186 u=morteza n=ansible | TASK [loadbalancer : Install the latest version packages] ****************************************************************************************************
+2023-06-06 07:57:00,164 p=198186 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 07:57:00,189 p=198186 u=morteza n=ansible | TASK [loadbalancer : Update all packages] ********************************************************************************************************************
+2023-06-06 07:57:03,682 p=198186 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 07:57:03,696 p=198186 u=morteza n=ansible | TASK [loadbalancer : nginx config for {{ instance.domain }}] *************************************************************************************************
+2023-06-06 07:57:05,181 p=198186 u=morteza n=ansible | fatal: [lb.sudoer.net]: FAILED! => {"changed": false, "checksum": "a36942e1edd6bf22179260b1367bfac69a58ac8b", "msg": "Destination directory /etc/systemd/system/nginx.service.d does not exist"}
+2023-06-06 07:57:05,185 p=198186 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 07:57:05,218 p=198186 u=morteza n=ansible | lb.sudoer.net              : ok=12   changed=8    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-06-06 07:59:29,550 p=198634 u=morteza n=ansible | PLAY [lb] ****************************************************************************************************************************************************
+2023-06-06 07:59:29,561 p=198634 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 07:59:31,892 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 07:59:31,915 p=198634 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 07:59:34,368 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 07:59:34,381 p=198634 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 07:59:37,987 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 07:59:38,004 p=198634 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 07:59:39,165 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 07:59:39,177 p=198634 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 07:59:40,678 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 07:59:40,694 p=198634 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 07:59:41,363 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 07:59:41,384 p=198634 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 07:59:42,950 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=setup.sh)
+2023-06-06 07:59:44,265 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=config)
+2023-06-06 07:59:44,295 p=198634 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 07:59:46,643 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['fail2ban'])
+2023-06-06 07:59:46,660 p=198634 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 07:59:50,177 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 07:59:50,233 p=198634 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 07:59:51,513 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 07:59:51,537 p=198634 u=morteza n=ansible | TASK [loadbalancer : Install the latest version packages] ****************************************************************************************************
+2023-06-06 07:59:53,762 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 07:59:53,779 p=198634 u=morteza n=ansible | TASK [loadbalancer : Update all packages] ********************************************************************************************************************
+2023-06-06 07:59:57,165 p=198634 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 07:59:57,183 p=198634 u=morteza n=ansible | TASK [loadbalancer : nginx config for {{ instance.domain }}] *************************************************************************************************
+2023-06-06 07:59:58,804 p=198634 u=morteza n=ansible | fatal: [lb.sudoer.net]: FAILED! => {"changed": false, "checksum": "a36942e1edd6bf22179260b1367bfac69a58ac8b", "msg": "Destination directory /etc/systemd/system/nginx.service.d does not exist"}
+2023-06-06 07:59:58,807 p=198634 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 07:59:58,808 p=198634 u=morteza n=ansible | lb.sudoer.net              : ok=12   changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:05:09,198 p=199085 u=morteza n=ansible | PLAY [lb] ****************************************************************************************************************************************************
+2023-06-06 08:05:09,219 p=199085 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:05:11,567 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:05:11,593 p=199085 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:05:14,984 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:05:15,001 p=199085 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:05:18,431 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:05:18,446 p=199085 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:05:19,592 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:05:19,609 p=199085 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:05:21,131 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:05:21,150 p=199085 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:05:21,844 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:05:21,865 p=199085 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:05:23,254 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=setup.sh)
+2023-06-06 08:05:24,551 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=config)
+2023-06-06 08:05:24,581 p=199085 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:05:26,817 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:05:26,836 p=199085 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:05:30,466 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:05:30,485 p=199085 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:05:31,871 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:05:31,896 p=199085 u=morteza n=ansible | TASK [loadbalancer : Install the latest version packages] ****************************************************************************************************
+2023-06-06 08:05:34,272 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:05:34,296 p=199085 u=morteza n=ansible | TASK [loadbalancer : Update all packages] ********************************************************************************************************************
+2023-06-06 08:05:37,724 p=199085 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:05:37,745 p=199085 u=morteza n=ansible | TASK [loadbalancer : Create directory if it does not exist] **************************************************************************************************
+2023-06-06 08:05:38,460 p=199085 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:05:39,145 p=199085 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:05:39,169 p=199085 u=morteza n=ansible | TASK [loadbalancer : nginx config override] ******************************************************************************************************************
+2023-06-06 08:05:40,841 p=199085 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:05:40,856 p=199085 u=morteza n=ansible | TASK [loadbalancer : nginx config conf.d] ********************************************************************************************************************
+2023-06-06 08:05:41,066 p=199085 u=morteza n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: . unexpected '}'
+2023-06-06 08:05:41,068 p=199085 u=morteza n=ansible | fatal: [lb.sudoer.net]: FAILED! => {"changed": false, "msg": "AnsibleError: template error while templating string: unexpected '}'. String: upstream backend {\n{% for backend in LB_BACKEND }\n    server backend.ip;\n{% endfor }\n}\n    \nserver {\n    if ($host !~ ^({{ LB_DOMAIN }}|www.{{ LB_DOMAIN }})$ ) {\n        return 444;\n    }\n    if ($request_method !~ ^(GET|HEAD|POST)$ ) {\n        return 444;\n    }\n    listen 80;\n    server_name www.{{ LB_DOMAIN }} {{ LB_DOMAIN }};\n\n    root {{ instance.root }};\n    access_log /var/log/nginx/{{ LB_DOMAIN }}.access.log;\n    error_log /var/log/nginx/{{ LB_DOMAIN }}.error.log;\n\n    location = /favicon.ico {\n        log_not_found off;\n        access_log off;\n    }\n\n    location = /robots.txt {\n        allow all;\n        log_not_found off;\n        access_log off;\n    }\n\t\n    location / {\n\t\t\t\tproxy_pass http://backend;\n    }\n    \n}\n\n. unexpected '}'"}
+2023-06-06 08:05:41,073 p=199085 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 08:05:41,074 p=199085 u=morteza n=ansible | lb.sudoer.net              : ok=14   changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:07:41,461 p=199320 u=morteza n=ansible | PLAY [lb] ****************************************************************************************************************************************************
+2023-06-06 08:07:41,474 p=199320 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:07:43,779 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:07:43,801 p=199320 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:07:46,544 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:07:46,569 p=199320 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:07:49,983 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:07:50,000 p=199320 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:07:51,230 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:07:51,255 p=199320 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:07:52,858 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:07:52,880 p=199320 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:07:53,579 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:07:53,597 p=199320 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:07:54,827 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=setup.sh)
+2023-06-06 08:07:56,076 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=config)
+2023-06-06 08:07:56,109 p=199320 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:07:58,360 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:07:58,369 p=199320 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:08:01,642 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:08:01,648 p=199320 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:08:02,959 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:08:02,992 p=199320 u=morteza n=ansible | TASK [loadbalancer : Install the latest version packages] ****************************************************************************************************
+2023-06-06 08:08:05,419 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:08:05,442 p=199320 u=morteza n=ansible | TASK [loadbalancer : Update all packages] ********************************************************************************************************************
+2023-06-06 08:08:08,736 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:08:08,759 p=199320 u=morteza n=ansible | TASK [loadbalancer : Create directory if it does not exist] **************************************************************************************************
+2023-06-06 08:08:09,509 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:08:10,220 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:08:10,235 p=199320 u=morteza n=ansible | TASK [loadbalancer : nginx config override] ******************************************************************************************************************
+2023-06-06 08:08:11,553 p=199320 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:08:11,576 p=199320 u=morteza n=ansible | TASK [loadbalancer : nginx config conf.d] ********************************************************************************************************************
+2023-06-06 08:08:11,731 p=199320 u=morteza n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'instance' is undefined. 'instance' is undefined
+2023-06-06 08:08:11,732 p=199320 u=morteza n=ansible | fatal: [lb.sudoer.net]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'instance' is undefined. 'instance' is undefined"}
+2023-06-06 08:08:11,737 p=199320 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 08:08:11,737 p=199320 u=morteza n=ansible | lb.sudoer.net              : ok=14   changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:08:37,177 p=199514 u=morteza n=ansible | PLAY [lb] ****************************************************************************************************************************************************
+2023-06-06 08:08:37,189 p=199514 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:08:39,107 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:08:39,143 p=199514 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:08:41,505 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:08:41,530 p=199514 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:08:44,758 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:08:44,775 p=199514 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:08:45,971 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:08:45,977 p=199514 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:08:47,360 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:08:47,366 p=199514 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:08:48,053 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:08:48,076 p=199514 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:08:49,301 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=setup.sh)
+2023-06-06 08:08:50,529 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=config)
+2023-06-06 08:08:50,559 p=199514 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:08:52,753 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:08:52,767 p=199514 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:08:56,039 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:08:56,059 p=199514 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:08:57,297 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:08:57,323 p=199514 u=morteza n=ansible | TASK [loadbalancer : Install the latest version packages] ****************************************************************************************************
+2023-06-06 08:08:59,525 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:08:59,539 p=199514 u=morteza n=ansible | TASK [loadbalancer : Update all packages] ********************************************************************************************************************
+2023-06-06 08:09:02,880 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:09:02,898 p=199514 u=morteza n=ansible | TASK [loadbalancer : Create directory if it does not exist] **************************************************************************************************
+2023-06-06 08:09:03,640 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:09:04,356 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:09:04,372 p=199514 u=morteza n=ansible | TASK [loadbalancer : nginx config override] ******************************************************************************************************************
+2023-06-06 08:09:05,646 p=199514 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:09:05,656 p=199514 u=morteza n=ansible | TASK [loadbalancer : nginx config conf.d] ********************************************************************************************************************
+2023-06-06 08:09:07,276 p=199514 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:09:07,310 p=199514 u=morteza n=ansible | RUNNING HANDLER [loadbalancer : reload nginx] ****************************************************************************************************************
+2023-06-06 08:09:08,883 p=199514 u=morteza n=ansible | fatal: [lb.sudoer.net]: FAILED! => {"changed": false, "msg": "Unable to reload service nginx: Job for nginx.service failed.\nSee \"systemctl status nginx.service\" and \"journalctl -xe\" for details.\n"}
+2023-06-06 08:09:08,888 p=199514 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 08:09:08,888 p=199514 u=morteza n=ansible | lb.sudoer.net              : ok=15   changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:10:58,999 p=199736 u=morteza n=ansible | PLAY [lb] ****************************************************************************************************************************************************
+2023-06-06 08:10:59,013 p=199736 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:11:01,297 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:11:01,315 p=199736 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:11:03,909 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:11:03,924 p=199736 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:11:07,295 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:11:07,317 p=199736 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:11:08,445 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:11:08,453 p=199736 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:11:09,962 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:11:09,983 p=199736 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:11:10,726 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:11:10,742 p=199736 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:11:12,061 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=setup.sh)
+2023-06-06 08:11:13,350 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=config)
+2023-06-06 08:11:13,385 p=199736 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:11:15,708 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:11:15,720 p=199736 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:11:19,109 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:11:19,133 p=199736 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:11:20,672 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:11:20,695 p=199736 u=morteza n=ansible | TASK [loadbalancer : Install the latest version packages] ****************************************************************************************************
+2023-06-06 08:11:22,877 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:11:22,896 p=199736 u=morteza n=ansible | TASK [loadbalancer : Update all packages] ********************************************************************************************************************
+2023-06-06 08:11:26,254 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:11:26,263 p=199736 u=morteza n=ansible | TASK [loadbalancer : Create directory if it does not exist] **************************************************************************************************
+2023-06-06 08:11:26,953 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:11:27,688 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:11:27,706 p=199736 u=morteza n=ansible | TASK [loadbalancer : nginx config override] ******************************************************************************************************************
+2023-06-06 08:11:28,986 p=199736 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:11:29,005 p=199736 u=morteza n=ansible | TASK [loadbalancer : nginx config conf.d] ********************************************************************************************************************
+2023-06-06 08:11:30,597 p=199736 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:11:30,634 p=199736 u=morteza n=ansible | RUNNING HANDLER [loadbalancer : reload nginx] ****************************************************************************************************************
+2023-06-06 08:11:32,190 p=199736 u=morteza n=ansible | fatal: [lb.sudoer.net]: FAILED! => {"changed": false, "msg": "Unable to reload service nginx: Job for nginx.service failed.\nSee \"systemctl status nginx.service\" and \"journalctl -xe\" for details.\n"}
+2023-06-06 08:11:32,212 p=199736 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 08:11:32,213 p=199736 u=morteza n=ansible | lb.sudoer.net              : ok=15   changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:12:09,104 p=199924 u=morteza n=ansible | PLAY [lb] ****************************************************************************************************************************************************
+2023-06-06 08:12:09,117 p=199924 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:12:11,150 p=199924 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:12:11,175 p=199924 u=morteza n=ansible | TASK [loadbalancer : Install the latest version packages] ****************************************************************************************************
+2023-06-06 08:12:13,954 p=199924 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:12:13,975 p=199924 u=morteza n=ansible | TASK [loadbalancer : Update all packages] ********************************************************************************************************************
+2023-06-06 08:12:17,500 p=199924 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:12:17,521 p=199924 u=morteza n=ansible | TASK [loadbalancer : Create directory if it does not exist] **************************************************************************************************
+2023-06-06 08:12:18,348 p=199924 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:12:18,979 p=199924 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:12:19,006 p=199924 u=morteza n=ansible | TASK [loadbalancer : nginx config override] ******************************************************************************************************************
+2023-06-06 08:12:20,375 p=199924 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:12:20,387 p=199924 u=morteza n=ansible | TASK [loadbalancer : nginx config conf.d] ********************************************************************************************************************
+2023-06-06 08:12:21,916 p=199924 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:12:21,941 p=199924 u=morteza n=ansible | RUNNING HANDLER [loadbalancer : reload nginx] ****************************************************************************************************************
+2023-06-06 08:12:23,503 p=199924 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:12:23,527 p=199924 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 08:12:23,528 p=199924 u=morteza n=ansible | lb.sudoer.net              : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:12:55,797 p=200090 u=morteza n=ansible | PLAY [db] ****************************************************************************************************************************************************
+2023-06-06 08:12:55,811 p=200090 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:12:59,265 p=200090 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:12:59,286 p=200090 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:13:53,668 p=200090 u=morteza n=ansible | changed: [db.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:13:53,677 p=200090 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:14:29,829 p=200090 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:14:29,849 p=200090 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:14:31,501 p=200090 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:14:31,522 p=200090 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:14:34,370 p=200090 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:14:34,390 p=200090 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:14:35,873 p=200090 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:14:35,896 p=200090 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:14:38,471 p=200090 u=morteza n=ansible | changed: [db.sudoer.net] => (item=setup.sh)
+2023-06-06 08:14:40,990 p=200090 u=morteza n=ansible | changed: [db.sudoer.net] => (item=config)
+2023-06-06 08:14:41,023 p=200090 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:14:47,949 p=200090 u=morteza n=ansible | changed: [db.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:14:47,972 p=200090 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:14:52,322 p=200090 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:14:52,328 p=200090 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:14:54,973 p=200090 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:14:54,993 p=200090 u=morteza n=ansible | TASK [mariadb : set sysctl] **********************************************************************************************************************************
+2023-06-06 08:14:56,316 p=200090 u=morteza n=ansible | changed: [db.sudoer.net] => (item={'name': 'net.ipv4.ip_forward', 'value': '0'})
+2023-06-06 08:14:56,330 p=200090 u=morteza n=ansible | TASK [mariadb : Install the latest version packages] *********************************************************************************************************
+2023-06-06 08:15:14,362 p=200090 u=morteza n=ansible | changed: [db.sudoer.net] => (item=['mariadb-server', 'mariadb-client', 'python3-mysqldb', 'percona-toolkit'])
+2023-06-06 08:15:14,389 p=200090 u=morteza n=ansible | TASK [mariadb : Update all packages] *************************************************************************************************************************
+2023-06-06 08:15:18,817 p=200090 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:15:18,831 p=200090 u=morteza n=ansible | TASK [mariadb : check if config file exist] ******************************************************************************************************************
+2023-06-06 08:15:19,955 p=200090 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:15:19,973 p=200090 u=morteza n=ansible | TASK [mariadb : Generate mysql root pass] ********************************************************************************************************************
+2023-06-06 08:15:20,018 p=200090 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:15:20,024 p=200090 u=morteza n=ansible | TASK [mariadb : Removes anonymous users] *********************************************************************************************************************
+2023-06-06 08:15:21,335 p=200090 u=morteza n=ansible | ok: [db.sudoer.net] => (item=127.0.0.1)
+2023-06-06 08:15:22,477 p=200090 u=morteza n=ansible | ok: [db.sudoer.net] => (item=localhost)
+2023-06-06 08:15:22,505 p=200090 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf {{ instance.name }}] ***********************************************************************************************************
+2023-06-06 08:15:25,102 p=200090 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:15:25,121 p=200090 u=morteza n=ansible | TASK [mariadb : Update MariaDB root password] ****************************************************************************************************************
+2023-06-06 08:15:26,527 p=200090 u=morteza n=ansible | changed: [db.sudoer.net] => (item=127.0.0.1)
+2023-06-06 08:15:27,738 p=200090 u=morteza n=ansible | changed: [db.sudoer.net] => (item=localhost)
+2023-06-06 08:15:27,774 p=200090 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf {{ user.name }}] ***************************************************************************************************************
+2023-06-06 08:15:30,349 p=200090 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:15:30,369 p=200090 u=morteza n=ansible | TASK [mariadb : configuring instances] ***********************************************************************************************************************
+2023-06-06 08:15:30,417 p=200090 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/mariadb/tasks/database.yml for db.sudoer.net => (item={'name': 'sudoer_net'})
+2023-06-06 08:15:30,427 p=200090 u=morteza n=ansible | TASK [mariadb : Create databases sudoer_net] *****************************************************************************************************************
+2023-06-06 08:15:31,776 p=200090 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:15:31,802 p=200090 u=morteza n=ansible | TASK [mariadb : configuring users] ***************************************************************************************************************************
+2023-06-06 08:15:31,831 p=200090 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/mariadb/tasks/users.yml for db.sudoer.net => (item={'name': 'sudoer_user', 'priv': ['sudoer_net.*:ALL,GRANT']})
+2023-06-06 08:15:31,840 p=200090 u=morteza n=ansible | TASK [mariadb : check if config file exist] ******************************************************************************************************************
+2023-06-06 08:15:33,005 p=200090 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:15:33,020 p=200090 u=morteza n=ansible | TASK [mariadb : Generate mysql root pass] ********************************************************************************************************************
+2023-06-06 08:15:33,069 p=200090 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:15:33,077 p=200090 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf sudoer_user] *******************************************************************************************************************
+2023-06-06 08:15:35,546 p=200090 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:15:35,570 p=200090 u=morteza n=ansible | TASK [mariadb : Create database user "sudoer_user"] **********************************************************************************************************
+2023-06-06 08:15:36,832 p=200090 u=morteza n=ansible | changed: [db.sudoer.net] => (item=sudoer_net.*:ALL,GRANT)
+2023-06-06 08:15:36,867 p=200090 u=morteza n=ansible | RUNNING HANDLER [iptables : restart iptables] ****************************************************************************************************************
+2023-06-06 08:15:38,601 p=200090 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:15:38,615 p=200090 u=morteza n=ansible | RUNNING HANDLER [fail2ban : restart fail2ban] ****************************************************************************************************************
+2023-06-06 08:15:40,902 p=200090 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:15:40,935 p=200090 u=morteza n=ansible | PLAY [app] ***************************************************************************************************************************************************
+2023-06-06 08:15:40,950 p=200090 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:15:43,367 p=200090 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:15:43,636 p=200090 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:15:43,681 p=200090 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:16:00,962 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:16:48,029 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:16:48,037 p=200090 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:16:54,925 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:16:56,165 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:16:56,179 p=200090 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:16:57,342 p=200090 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:16:57,476 p=200090 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:16:57,486 p=200090 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:16:59,050 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:16:59,241 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:16:59,254 p=200090 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:16:59,997 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:17:00,056 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:17:00,063 p=200090 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:17:01,593 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=setup.sh)
+2023-06-06 08:17:01,709 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=setup.sh)
+2023-06-06 08:17:03,003 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=config)
+2023-06-06 08:17:03,312 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=config)
+2023-06-06 08:17:03,350 p=200090 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:17:10,292 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:17:11,776 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:17:11,796 p=200090 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:17:15,866 p=200090 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:17:17,043 p=200090 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:17:17,059 p=200090 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:17:18,510 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:17:18,735 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:17:18,763 p=200090 u=morteza n=ansible | TASK [nginx : Install the latest version packages] ***********************************************************************************************************
+2023-06-06 08:17:33,983 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:17:37,010 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:17:37,025 p=200090 u=morteza n=ansible | TASK [nginx : Update all packages] ***************************************************************************************************************************
+2023-06-06 08:17:41,198 p=200090 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:17:42,614 p=200090 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:17:42,627 p=200090 u=morteza n=ansible | TASK [nginx : Create directory if it does not exist] *********************************************************************************************************
+2023-06-06 08:17:43,378 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:17:43,438 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:17:44,097 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:17:44,231 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:17:44,255 p=200090 u=morteza n=ansible | TASK [nginx : nginx config for {{ instance.domain }}] ********************************************************************************************************
+2023-06-06 08:17:45,729 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:17:45,919 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:17:45,930 p=200090 u=morteza n=ansible | TASK [nginx : configuring instances] *************************************************************************************************************************
+2023-06-06 08:17:45,980 p=200090 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/nginx/tasks/instances.yml for app1.sudoer.net, app2.sudoer.net => (item={'domain': 'app.sudoer.net', 'email': 'morteza.bashsiz@gmail.com', 'root': '/home/www-data/app.sudoer.net/www/wordpress'})
+2023-06-06 08:17:45,988 p=200090 u=morteza n=ansible | TASK [nginx : nginx config for app.sudoer.net] ***************************************************************************************************************
+2023-06-06 08:17:47,499 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:17:47,679 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:17:47,691 p=200090 u=morteza n=ansible | TASK [nginx : nginx config for app.sudoer.net] ***************************************************************************************************************
+2023-06-06 08:17:49,133 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:17:49,265 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:17:49,306 p=200090 u=morteza n=ansible | TASK [php-fpm : Install the latest version packages] *********************************************************************************************************
+2023-06-06 08:18:10,309 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=['php7.4-fpm', 'php7.4-mysql', 'php7.4-gd'])
+2023-06-06 08:18:15,010 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=['php7.4-fpm', 'php7.4-mysql', 'php7.4-gd'])
+2023-06-06 08:18:15,023 p=200090 u=morteza n=ansible | TASK [php-fpm : Update all packages] *************************************************************************************************************************
+2023-06-06 08:18:19,044 p=200090 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:18:20,237 p=200090 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:18:20,269 p=200090 u=morteza n=ansible | TASK [wordpress : configuring instances] *********************************************************************************************************************
+2023-06-06 08:18:20,316 p=200090 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/wordpress/tasks/instances.yml for app1.sudoer.net, app2.sudoer.net => (item={'name': 'app.sudoer.net', 'db': 'sudoer_net', 'db_user': 'sudoer_user', 'db_host': 'db.sudoer.net', 'db_charset': 'utf8'})
+2023-06-06 08:18:20,325 p=200090 u=morteza n=ansible | TASK [wordpress : check if www dir exists app.sudoer.net] ****************************************************************************************************
+2023-06-06 08:18:21,041 p=200090 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:18:21,139 p=200090 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:18:21,151 p=200090 u=morteza n=ansible | TASK [wordpress : Create home directory for instance app.sudoer.net] *****************************************************************************************
+2023-06-06 08:18:21,873 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:18:22,002 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:18:22,014 p=200090 u=morteza n=ansible | TASK [wordpress : Unarchive wordpress latest] ****************************************************************************************************************
+2023-06-06 08:18:27,515 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:18:28,039 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:18:28,065 p=200090 u=morteza n=ansible | TASK [wordpress : change owner of wordpress instance app.sudoer.net] *****************************************************************************************
+2023-06-06 08:18:28,969 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:18:29,199 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:18:29,222 p=200090 u=morteza n=ansible | TASK [wordpress : check if config file exists app.sudoer.net] ************************************************************************************************
+2023-06-06 08:18:31,352 p=200090 u=morteza n=ansible | ok: [app1.sudoer.net -> db.sudoer.net]
+2023-06-06 08:18:31,358 p=200090 u=morteza n=ansible | ok: [app2.sudoer.net -> db.sudoer.net]
+2023-06-06 08:18:31,379 p=200090 u=morteza n=ansible | TASK [wordpress : Get wp pass] *******************************************************************************************************************************
+2023-06-06 08:18:32,865 p=200090 u=morteza n=ansible | ok: [app1.sudoer.net -> db.sudoer.net]
+2023-06-06 08:18:32,866 p=200090 u=morteza n=ansible | ok: [app2.sudoer.net -> db.sudoer.net]
+2023-06-06 08:18:32,881 p=200090 u=morteza n=ansible | TASK [wordpress : wordpress config file] *********************************************************************************************************************
+2023-06-06 08:18:34,360 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:18:34,835 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:18:34,892 p=200090 u=morteza n=ansible | RUNNING HANDLER [iptables : restart iptables] ****************************************************************************************************************
+2023-06-06 08:18:36,123 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:18:36,401 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:18:36,413 p=200090 u=morteza n=ansible | RUNNING HANDLER [fail2ban : restart fail2ban] ****************************************************************************************************************
+2023-06-06 08:18:38,303 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:18:38,479 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:18:38,484 p=200090 u=morteza n=ansible | RUNNING HANDLER [nginx : reload nginx] ***********************************************************************************************************************
+2023-06-06 08:18:40,006 p=200090 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:18:40,583 p=200090 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:18:40,627 p=200090 u=morteza n=ansible | PLAY [lb] ****************************************************************************************************************************************************
+2023-06-06 08:18:40,635 p=200090 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:18:42,554 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:18:42,580 p=200090 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:18:44,802 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:18:44,816 p=200090 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:18:48,207 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:18:48,227 p=200090 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:18:49,230 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:18:49,249 p=200090 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:18:50,467 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:18:50,481 p=200090 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:18:51,104 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:18:51,127 p=200090 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:18:52,329 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=setup.sh)
+2023-06-06 08:18:53,556 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=config)
+2023-06-06 08:18:53,582 p=200090 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:18:55,719 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:18:55,739 p=200090 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:18:59,514 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:18:59,530 p=200090 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:19:00,782 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:19:00,798 p=200090 u=morteza n=ansible | TASK [loadbalancer : Install the latest version packages] ****************************************************************************************************
+2023-06-06 08:19:03,037 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:19:03,053 p=200090 u=morteza n=ansible | TASK [loadbalancer : Update all packages] ********************************************************************************************************************
+2023-06-06 08:19:06,438 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:19:06,452 p=200090 u=morteza n=ansible | TASK [loadbalancer : Create directory if it does not exist] **************************************************************************************************
+2023-06-06 08:19:07,130 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:19:07,776 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:19:07,795 p=200090 u=morteza n=ansible | TASK [loadbalancer : nginx config override] ******************************************************************************************************************
+2023-06-06 08:19:08,977 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:19:08,985 p=200090 u=morteza n=ansible | TASK [loadbalancer : nginx config conf.d] ********************************************************************************************************************
+2023-06-06 08:19:10,180 p=200090 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:19:10,225 p=200090 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 08:19:10,225 p=200090 u=morteza n=ansible | app1.sudoer.net            : ok=30   changed=20   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:19:10,225 p=200090 u=morteza n=ansible | app2.sudoer.net            : ok=30   changed=20   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:19:10,225 p=200090 u=morteza n=ansible | db.sudoer.net              : ok=28   changed=17   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:19:10,225 p=200090 u=morteza n=ansible | lb.sudoer.net              : ok=15   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:19:15,047 p=201644 u=morteza n=ansible | PLAY [db] ****************************************************************************************************************************************************
+2023-06-06 08:19:15,061 p=201644 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:19:17,634 p=201644 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:19:17,653 p=201644 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:19:21,001 p=201644 u=morteza n=ansible | ok: [db.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:19:21,011 p=201644 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:19:25,490 p=201644 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:19:25,511 p=201644 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:19:27,187 p=201644 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:19:27,204 p=201644 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:19:29,469 p=201644 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:19:29,482 p=201644 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:19:30,541 p=201644 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:19:30,556 p=201644 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:19:32,573 p=201644 u=morteza n=ansible | ok: [db.sudoer.net] => (item=setup.sh)
+2023-06-06 08:19:34,600 p=201644 u=morteza n=ansible | ok: [db.sudoer.net] => (item=config)
+2023-06-06 08:19:34,629 p=201644 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:19:37,823 p=201644 u=morteza n=ansible | ok: [db.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:19:37,853 p=201644 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:19:42,322 p=201644 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:19:42,332 p=201644 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:19:44,348 p=201644 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:19:44,367 p=201644 u=morteza n=ansible | TASK [mariadb : set sysctl] **********************************************************************************************************************************
+2023-06-06 08:19:45,608 p=201644 u=morteza n=ansible | ok: [db.sudoer.net] => (item={'name': 'net.ipv4.ip_forward', 'value': '0'})
+2023-06-06 08:19:45,622 p=201644 u=morteza n=ansible | TASK [mariadb : Install the latest version packages] *********************************************************************************************************
+2023-06-06 08:19:48,697 p=201644 u=morteza n=ansible | ok: [db.sudoer.net] => (item=['mariadb-server', 'mariadb-client', 'python3-mysqldb', 'percona-toolkit'])
+2023-06-06 08:19:48,709 p=201644 u=morteza n=ansible | TASK [mariadb : Update all packages] *************************************************************************************************************************
+2023-06-06 08:19:52,973 p=201644 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:19:52,981 p=201644 u=morteza n=ansible | TASK [mariadb : check if config file exist] ******************************************************************************************************************
+2023-06-06 08:19:54,116 p=201644 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:19:54,128 p=201644 u=morteza n=ansible | TASK [mariadb : Generate mysql root pass] ********************************************************************************************************************
+2023-06-06 08:19:54,153 p=201644 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:19:54,165 p=201644 u=morteza n=ansible | TASK [mariadb : Removes anonymous users] *********************************************************************************************************************
+2023-06-06 08:19:55,473 p=201644 u=morteza n=ansible | ok: [db.sudoer.net] => (item=127.0.0.1)
+2023-06-06 08:19:56,613 p=201644 u=morteza n=ansible | ok: [db.sudoer.net] => (item=localhost)
+2023-06-06 08:19:56,634 p=201644 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf {{ instance.name }}] ***********************************************************************************************************
+2023-06-06 08:19:56,652 p=201644 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:19:56,661 p=201644 u=morteza n=ansible | TASK [mariadb : Update MariaDB root password] ****************************************************************************************************************
+2023-06-06 08:19:56,684 p=201644 u=morteza n=ansible | skipping: [db.sudoer.net] => (item=127.0.0.1) 
+2023-06-06 08:19:56,685 p=201644 u=morteza n=ansible | skipping: [db.sudoer.net] => (item=localhost) 
+2023-06-06 08:19:56,685 p=201644 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:19:56,695 p=201644 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf {{ user.name }}] ***************************************************************************************************************
+2023-06-06 08:19:58,722 p=201644 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:19:58,736 p=201644 u=morteza n=ansible | TASK [mariadb : configuring instances] ***********************************************************************************************************************
+2023-06-06 08:19:58,779 p=201644 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/mariadb/tasks/database.yml for db.sudoer.net => (item={'name': 'sudoer_net'})
+2023-06-06 08:19:58,792 p=201644 u=morteza n=ansible | TASK [mariadb : Create databases sudoer_net] *****************************************************************************************************************
+2023-06-06 08:20:00,036 p=201644 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:20:00,050 p=201644 u=morteza n=ansible | TASK [mariadb : configuring users] ***************************************************************************************************************************
+2023-06-06 08:20:00,083 p=201644 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/mariadb/tasks/users.yml for db.sudoer.net => (item={'name': 'sudoer_user', 'priv': ['sudoer_net.*:ALL,GRANT']})
+2023-06-06 08:20:00,092 p=201644 u=morteza n=ansible | TASK [mariadb : check if config file exist] ******************************************************************************************************************
+2023-06-06 08:20:01,225 p=201644 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:20:01,249 p=201644 u=morteza n=ansible | TASK [mariadb : Generate mysql root pass] ********************************************************************************************************************
+2023-06-06 08:20:01,266 p=201644 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:20:01,274 p=201644 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf sudoer_user] *******************************************************************************************************************
+2023-06-06 08:20:01,289 p=201644 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:20:01,298 p=201644 u=morteza n=ansible | TASK [mariadb : Create database user "sudoer_user"] **********************************************************************************************************
+2023-06-06 08:20:01,315 p=201644 u=morteza n=ansible | skipping: [db.sudoer.net] => (item=sudoer_net.*:ALL,GRANT) 
+2023-06-06 08:20:01,316 p=201644 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:20:01,343 p=201644 u=morteza n=ansible | PLAY [app] ***************************************************************************************************************************************************
+2023-06-06 08:20:01,353 p=201644 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:20:03,713 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:03,792 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:03,819 p=201644 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:20:06,576 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:20:07,403 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:20:07,429 p=201644 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:20:11,795 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:13,410 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:13,432 p=201644 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:20:14,612 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:14,796 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:14,807 p=201644 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:20:16,314 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:16,476 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:16,500 p=201644 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:20:17,287 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:17,442 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:17,448 p=201644 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:20:18,696 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=setup.sh)
+2023-06-06 08:20:18,951 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=setup.sh)
+2023-06-06 08:20:19,908 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=config)
+2023-06-06 08:20:20,320 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=config)
+2023-06-06 08:20:20,352 p=201644 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:20:22,976 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:20:24,124 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:20:24,149 p=201644 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:20:28,030 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:29,503 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:29,516 p=201644 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:20:30,858 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:30,987 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:31,019 p=201644 u=morteza n=ansible | TASK [nginx : Install the latest version packages] ***********************************************************************************************************
+2023-06-06 08:20:33,454 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:20:34,371 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:20:34,387 p=201644 u=morteza n=ansible | TASK [nginx : Update all packages] ***************************************************************************************************************************
+2023-06-06 08:20:38,509 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:39,963 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:39,971 p=201644 u=morteza n=ansible | TASK [nginx : Create directory if it does not exist] *********************************************************************************************************
+2023-06-06 08:20:40,670 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:20:40,846 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:20:41,330 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:20:41,571 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:20:41,587 p=201644 u=morteza n=ansible | TASK [nginx : nginx config for {{ instance.domain }}] ********************************************************************************************************
+2023-06-06 08:20:42,886 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:43,071 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:43,085 p=201644 u=morteza n=ansible | TASK [nginx : configuring instances] *************************************************************************************************************************
+2023-06-06 08:20:43,131 p=201644 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/nginx/tasks/instances.yml for app1.sudoer.net, app2.sudoer.net => (item={'domain': 'app.sudoer.net', 'email': 'morteza.bashsiz@gmail.com', 'root': '/home/www-data/app.sudoer.net/www/wordpress'})
+2023-06-06 08:20:43,138 p=201644 u=morteza n=ansible | TASK [nginx : nginx config for app.sudoer.net] ***************************************************************************************************************
+2023-06-06 08:20:44,570 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:44,621 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:44,636 p=201644 u=morteza n=ansible | TASK [nginx : nginx config for app.sudoer.net] ***************************************************************************************************************
+2023-06-06 08:20:46,052 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:46,074 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:46,096 p=201644 u=morteza n=ansible | TASK [php-fpm : Install the latest version packages] *********************************************************************************************************
+2023-06-06 08:20:48,599 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=['php7.4-fpm', 'php7.4-mysql', 'php7.4-gd'])
+2023-06-06 08:20:49,637 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=['php7.4-fpm', 'php7.4-mysql', 'php7.4-gd'])
+2023-06-06 08:20:49,646 p=201644 u=morteza n=ansible | TASK [php-fpm : Update all packages] *************************************************************************************************************************
+2023-06-06 08:20:53,789 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:55,664 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:55,687 p=201644 u=morteza n=ansible | TASK [wordpress : configuring instances] *********************************************************************************************************************
+2023-06-06 08:20:55,736 p=201644 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/wordpress/tasks/instances.yml for app1.sudoer.net, app2.sudoer.net => (item={'name': 'app.sudoer.net', 'db': 'sudoer_net', 'db_user': 'sudoer_user', 'db_host': 'db.sudoer.net', 'db_charset': 'utf8'})
+2023-06-06 08:20:55,746 p=201644 u=morteza n=ansible | TASK [wordpress : check if www dir exists app.sudoer.net] ****************************************************************************************************
+2023-06-06 08:20:56,534 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:56,611 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:56,619 p=201644 u=morteza n=ansible | TASK [wordpress : Create home directory for instance app.sudoer.net] *****************************************************************************************
+2023-06-06 08:20:57,320 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:20:57,412 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:20:57,425 p=201644 u=morteza n=ansible | TASK [wordpress : Unarchive wordpress latest] ****************************************************************************************************************
+2023-06-06 08:20:57,451 p=201644 u=morteza n=ansible | skipping: [app1.sudoer.net]
+2023-06-06 08:20:57,466 p=201644 u=morteza n=ansible | skipping: [app2.sudoer.net]
+2023-06-06 08:20:57,481 p=201644 u=morteza n=ansible | TASK [wordpress : change owner of wordpress instance app.sudoer.net] *****************************************************************************************
+2023-06-06 08:20:57,506 p=201644 u=morteza n=ansible | skipping: [app1.sudoer.net]
+2023-06-06 08:20:57,517 p=201644 u=morteza n=ansible | skipping: [app2.sudoer.net]
+2023-06-06 08:20:57,530 p=201644 u=morteza n=ansible | TASK [wordpress : check if config file exists app.sudoer.net] ************************************************************************************************
+2023-06-06 08:20:58,955 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net -> db.sudoer.net]
+2023-06-06 08:20:58,967 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net -> db.sudoer.net]
+2023-06-06 08:20:58,975 p=201644 u=morteza n=ansible | TASK [wordpress : Get wp pass] *******************************************************************************************************************************
+2023-06-06 08:21:00,277 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net -> db.sudoer.net]
+2023-06-06 08:21:00,310 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net -> db.sudoer.net]
+2023-06-06 08:21:00,334 p=201644 u=morteza n=ansible | TASK [wordpress : wordpress config file] *********************************************************************************************************************
+2023-06-06 08:21:01,785 p=201644 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:21:01,927 p=201644 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:21:01,985 p=201644 u=morteza n=ansible | PLAY [lb] ****************************************************************************************************************************************************
+2023-06-06 08:21:01,993 p=201644 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:21:04,076 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:21:04,101 p=201644 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:21:06,371 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:21:06,388 p=201644 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:21:09,926 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:21:09,936 p=201644 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:21:10,998 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:21:11,013 p=201644 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:21:12,251 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:21:12,262 p=201644 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:21:12,886 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:21:12,896 p=201644 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:21:14,129 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=setup.sh)
+2023-06-06 08:21:15,362 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=config)
+2023-06-06 08:21:15,379 p=201644 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:21:17,657 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:21:17,669 p=201644 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:21:20,995 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:21:21,003 p=201644 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:21:22,262 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:21:22,286 p=201644 u=morteza n=ansible | TASK [loadbalancer : Install the latest version packages] ****************************************************************************************************
+2023-06-06 08:21:24,530 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:21:24,546 p=201644 u=morteza n=ansible | TASK [loadbalancer : Update all packages] ********************************************************************************************************************
+2023-06-06 08:21:27,954 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:21:27,962 p=201644 u=morteza n=ansible | TASK [loadbalancer : Create directory if it does not exist] **************************************************************************************************
+2023-06-06 08:21:28,622 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:21:29,331 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:21:29,343 p=201644 u=morteza n=ansible | TASK [loadbalancer : nginx config override] ******************************************************************************************************************
+2023-06-06 08:21:30,634 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:21:30,646 p=201644 u=morteza n=ansible | TASK [loadbalancer : nginx config conf.d] ********************************************************************************************************************
+2023-06-06 08:21:31,860 p=201644 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:21:31,896 p=201644 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 08:21:31,896 p=201644 u=morteza n=ansible | app1.sudoer.net            : ok=25   changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-06-06 08:21:31,896 p=201644 u=morteza n=ansible | app2.sudoer.net            : ok=25   changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-06-06 08:21:31,896 p=201644 u=morteza n=ansible | db.sudoer.net              : ok=20   changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2023-06-06 08:21:31,896 p=201644 u=morteza n=ansible | lb.sudoer.net              : ok=15   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:30:16,905 p=204064 u=morteza n=ansible | PLAY [db] ****************************************************************************************************************************************************
+2023-06-06 08:30:16,917 p=204064 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:30:19,958 p=204064 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:30:19,980 p=204064 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:30:22,976 p=204064 u=morteza n=ansible | ok: [db.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:30:22,995 p=204064 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:30:27,385 p=204064 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:30:27,397 p=204064 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:30:29,109 p=204064 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:30:29,131 p=204064 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:30:31,460 p=204064 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:30:31,483 p=204064 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:30:32,592 p=204064 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:30:32,604 p=204064 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:30:34,553 p=204064 u=morteza n=ansible | ok: [db.sudoer.net] => (item=setup.sh)
+2023-06-06 08:30:36,495 p=204064 u=morteza n=ansible | ok: [db.sudoer.net] => (item=config)
+2023-06-06 08:30:36,515 p=204064 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:30:39,568 p=204064 u=morteza n=ansible | ok: [db.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:30:39,582 p=204064 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:30:44,077 p=204064 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:30:44,097 p=204064 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:30:46,135 p=204064 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:30:46,153 p=204064 u=morteza n=ansible | TASK [mariadb : set sysctl] **********************************************************************************************************************************
+2023-06-06 08:30:47,432 p=204064 u=morteza n=ansible | ok: [db.sudoer.net] => (item={'name': 'net.ipv4.ip_forward', 'value': '0'})
+2023-06-06 08:30:47,445 p=204064 u=morteza n=ansible | TASK [mariadb : Install the latest version packages] *********************************************************************************************************
+2023-06-06 08:30:50,331 p=204064 u=morteza n=ansible | ok: [db.sudoer.net] => (item=['mariadb-server', 'mariadb-client', 'python3-mysqldb', 'percona-toolkit'])
+2023-06-06 08:30:50,342 p=204064 u=morteza n=ansible | TASK [mariadb : Update all packages] *************************************************************************************************************************
+2023-06-06 08:30:54,514 p=204064 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:30:54,525 p=204064 u=morteza n=ansible | TASK [mariadb : check if config file exist] ******************************************************************************************************************
+2023-06-06 08:30:55,686 p=204064 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:30:55,711 p=204064 u=morteza n=ansible | TASK [mariadb : Generate mysql root pass] ********************************************************************************************************************
+2023-06-06 08:30:55,731 p=204064 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:30:55,739 p=204064 u=morteza n=ansible | TASK [mariadb : Removes anonymous users] *********************************************************************************************************************
+2023-06-06 08:30:57,122 p=204064 u=morteza n=ansible | ok: [db.sudoer.net] => (item=127.0.0.1)
+2023-06-06 08:30:58,221 p=204064 u=morteza n=ansible | ok: [db.sudoer.net] => (item=localhost)
+2023-06-06 08:30:58,243 p=204064 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf {{ instance.name }}] ***********************************************************************************************************
+2023-06-06 08:30:58,261 p=204064 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:30:58,268 p=204064 u=morteza n=ansible | TASK [mariadb : Update MariaDB root password] ****************************************************************************************************************
+2023-06-06 08:30:58,287 p=204064 u=morteza n=ansible | skipping: [db.sudoer.net] => (item=127.0.0.1) 
+2023-06-06 08:30:58,289 p=204064 u=morteza n=ansible | skipping: [db.sudoer.net] => (item=localhost) 
+2023-06-06 08:30:58,290 p=204064 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:30:58,298 p=204064 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf {{ user.name }}] ***************************************************************************************************************
+2023-06-06 08:31:00,356 p=204064 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:31:00,374 p=204064 u=morteza n=ansible | TASK [mariadb : configuring instances] ***********************************************************************************************************************
+2023-06-06 08:31:00,402 p=204064 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/mariadb/tasks/database.yml for db.sudoer.net => (item={'name': 'sudoer_net'})
+2023-06-06 08:31:00,413 p=204064 u=morteza n=ansible | TASK [mariadb : Create databases sudoer_net] *****************************************************************************************************************
+2023-06-06 08:31:01,741 p=204064 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:31:01,762 p=204064 u=morteza n=ansible | TASK [mariadb : configuring users] ***************************************************************************************************************************
+2023-06-06 08:31:01,794 p=204064 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/mariadb/tasks/users.yml for db.sudoer.net => (item={'name': 'sudoer_user', 'priv': ['sudoer_net.*:ALL,GRANT']})
+2023-06-06 08:31:01,802 p=204064 u=morteza n=ansible | TASK [mariadb : check if config file exist] ******************************************************************************************************************
+2023-06-06 08:31:02,912 p=204064 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:31:02,924 p=204064 u=morteza n=ansible | TASK [mariadb : Generate mysql root pass] ********************************************************************************************************************
+2023-06-06 08:31:02,949 p=204064 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:31:02,959 p=204064 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf sudoer_user] *******************************************************************************************************************
+2023-06-06 08:31:02,974 p=204064 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:31:02,983 p=204064 u=morteza n=ansible | TASK [mariadb : Create database user "sudoer_user"] **********************************************************************************************************
+2023-06-06 08:31:03,004 p=204064 u=morteza n=ansible | skipping: [db.sudoer.net] => (item=sudoer_net.*:ALL,GRANT) 
+2023-06-06 08:31:03,006 p=204064 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:31:03,038 p=204064 u=morteza n=ansible | PLAY [app] ***************************************************************************************************************************************************
+2023-06-06 08:31:03,049 p=204064 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:31:05,256 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:05,389 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:05,425 p=204064 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:31:07,877 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:31:08,444 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:31:08,452 p=204064 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:31:12,484 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:13,529 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:13,543 p=204064 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:31:14,651 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:14,813 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:14,830 p=204064 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:31:16,082 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:16,272 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:16,295 p=204064 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:31:17,065 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:17,090 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:17,105 p=204064 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:31:18,444 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=setup.sh)
+2023-06-06 08:31:18,495 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=setup.sh)
+2023-06-06 08:31:19,633 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=config)
+2023-06-06 08:31:19,885 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=config)
+2023-06-06 08:31:19,919 p=204064 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:31:22,314 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:31:22,899 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:31:22,917 p=204064 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:31:26,678 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:28,167 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:28,182 p=204064 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:31:29,669 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:29,780 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:29,800 p=204064 u=morteza n=ansible | TASK [nginx : Install the latest version packages] ***********************************************************************************************************
+2023-06-06 08:31:32,346 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:31:32,845 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:31:32,859 p=204064 u=morteza n=ansible | TASK [nginx : Update all packages] ***************************************************************************************************************************
+2023-06-06 08:31:37,235 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:38,461 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:38,470 p=204064 u=morteza n=ansible | TASK [nginx : Create directory if it does not exist] *********************************************************************************************************
+2023-06-06 08:31:39,242 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:31:39,293 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:31:39,957 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:31:40,015 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:31:40,026 p=204064 u=morteza n=ansible | TASK [nginx : nginx config for {{ instance.domain }}] ********************************************************************************************************
+2023-06-06 08:31:41,413 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:41,455 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:41,464 p=204064 u=morteza n=ansible | TASK [nginx : configuring instances] *************************************************************************************************************************
+2023-06-06 08:31:41,512 p=204064 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/nginx/tasks/instances.yml for app1.sudoer.net, app2.sudoer.net => (item={'domain': 'app.sudoer.net', 'email': 'morteza.bashsiz@gmail.com', 'root': '/home/www-data/app.sudoer.net/www/wordpress'})
+2023-06-06 08:31:41,520 p=204064 u=morteza n=ansible | TASK [nginx : nginx config for app.sudoer.net] ***************************************************************************************************************
+2023-06-06 08:31:42,780 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:42,941 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:42,948 p=204064 u=morteza n=ansible | TASK [nginx : nginx config for app.sudoer.net] ***************************************************************************************************************
+2023-06-06 08:31:44,217 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:44,390 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:44,416 p=204064 u=morteza n=ansible | TASK [php-fpm : Install the latest version packages] *********************************************************************************************************
+2023-06-06 08:31:47,139 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=['php7.4-fpm', 'php7.4-mysql', 'php7.4-gd'])
+2023-06-06 08:31:47,546 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=['php7.4-fpm', 'php7.4-mysql', 'php7.4-gd'])
+2023-06-06 08:31:47,560 p=204064 u=morteza n=ansible | TASK [php-fpm : Update all packages] *************************************************************************************************************************
+2023-06-06 08:31:51,503 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:52,598 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:52,629 p=204064 u=morteza n=ansible | TASK [wordpress : configuring instances] *********************************************************************************************************************
+2023-06-06 08:31:52,673 p=204064 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/wordpress/tasks/instances.yml for app1.sudoer.net, app2.sudoer.net => (item={'name': 'app.sudoer.net', 'db': 'sudoer_net', 'db_user': 'sudoer_user', 'db_host': 'db.sudoer.net', 'db_charset': 'utf8'})
+2023-06-06 08:31:52,681 p=204064 u=morteza n=ansible | TASK [wordpress : check if www dir exists app.sudoer.net] ****************************************************************************************************
+2023-06-06 08:31:53,384 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:53,475 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:53,483 p=204064 u=morteza n=ansible | TASK [wordpress : Create home directory for instance app.sudoer.net] *****************************************************************************************
+2023-06-06 08:31:54,343 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:54,403 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:54,414 p=204064 u=morteza n=ansible | TASK [wordpress : Unarchive wordpress latest] ****************************************************************************************************************
+2023-06-06 08:31:54,435 p=204064 u=morteza n=ansible | skipping: [app1.sudoer.net]
+2023-06-06 08:31:54,445 p=204064 u=morteza n=ansible | skipping: [app2.sudoer.net]
+2023-06-06 08:31:54,454 p=204064 u=morteza n=ansible | TASK [wordpress : change owner of wordpress instance app.sudoer.net] *****************************************************************************************
+2023-06-06 08:31:54,474 p=204064 u=morteza n=ansible | skipping: [app1.sudoer.net]
+2023-06-06 08:31:54,482 p=204064 u=morteza n=ansible | skipping: [app2.sudoer.net]
+2023-06-06 08:31:54,492 p=204064 u=morteza n=ansible | TASK [wordpress : check if config file exists app.sudoer.net] ************************************************************************************************
+2023-06-06 08:31:55,855 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net -> db.sudoer.net]
+2023-06-06 08:31:55,884 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net -> db.sudoer.net]
+2023-06-06 08:31:55,898 p=204064 u=morteza n=ansible | TASK [wordpress : Get wp pass] *******************************************************************************************************************************
+2023-06-06 08:31:57,276 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net -> db.sudoer.net]
+2023-06-06 08:31:57,277 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net -> db.sudoer.net]
+2023-06-06 08:31:57,291 p=204064 u=morteza n=ansible | TASK [wordpress : wordpress config file] *********************************************************************************************************************
+2023-06-06 08:31:58,605 p=204064 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:31:58,752 p=204064 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:31:58,822 p=204064 u=morteza n=ansible | PLAY [lb] ****************************************************************************************************************************************************
+2023-06-06 08:31:58,830 p=204064 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:32:00,751 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:32:00,769 p=204064 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:32:02,944 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:32:02,960 p=204064 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:32:06,429 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:32:06,440 p=204064 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:32:07,519 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:32:07,535 p=204064 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:32:08,995 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:32:09,007 p=204064 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:32:09,696 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:32:09,705 p=204064 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:32:11,014 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=setup.sh)
+2023-06-06 08:32:12,179 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=config)
+2023-06-06 08:32:12,200 p=204064 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:32:14,396 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:32:14,406 p=204064 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:32:17,802 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:32:17,817 p=204064 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:32:19,126 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:32:19,148 p=204064 u=morteza n=ansible | TASK [loadbalancer : Install the latest version packages] ****************************************************************************************************
+2023-06-06 08:32:21,329 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:32:21,342 p=204064 u=morteza n=ansible | TASK [loadbalancer : Update all packages] ********************************************************************************************************************
+2023-06-06 08:32:24,792 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:32:24,802 p=204064 u=morteza n=ansible | TASK [loadbalancer : Create directory if it does not exist] **************************************************************************************************
+2023-06-06 08:32:25,511 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:32:26,192 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:32:26,204 p=204064 u=morteza n=ansible | TASK [loadbalancer : nginx config override] ******************************************************************************************************************
+2023-06-06 08:32:27,423 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:32:27,436 p=204064 u=morteza n=ansible | TASK [loadbalancer : nginx config conf.d] ********************************************************************************************************************
+2023-06-06 08:32:28,751 p=204064 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:32:28,783 p=204064 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 08:32:28,783 p=204064 u=morteza n=ansible | app1.sudoer.net            : ok=25   changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-06-06 08:32:28,783 p=204064 u=morteza n=ansible | app2.sudoer.net            : ok=25   changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-06-06 08:32:28,783 p=204064 u=morteza n=ansible | db.sudoer.net              : ok=20   changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2023-06-06 08:32:28,783 p=204064 u=morteza n=ansible | lb.sudoer.net              : ok=15   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:47:48,488 p=206750 u=morteza n=ansible | PLAY [db] ****************************************************************************************************************************************************
+2023-06-06 08:47:48,501 p=206750 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:47:51,895 p=206750 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:47:51,913 p=206750 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:48:08,091 p=206750 u=morteza n=ansible | changed: [db.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:48:08,100 p=206750 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:48:41,247 p=206750 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:48:41,256 p=206750 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:48:42,906 p=206750 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:48:42,915 p=206750 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:48:45,590 p=206750 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:48:45,597 p=206750 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:48:46,829 p=206750 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:48:46,837 p=206750 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:48:49,172 p=206750 u=morteza n=ansible | changed: [db.sudoer.net] => (item=setup.sh)
+2023-06-06 08:48:51,500 p=206750 u=morteza n=ansible | changed: [db.sudoer.net] => (item=config)
+2023-06-06 08:48:51,514 p=206750 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:48:58,224 p=206750 u=morteza n=ansible | changed: [db.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:48:58,233 p=206750 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:49:02,427 p=206750 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:49:02,435 p=206750 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:49:05,031 p=206750 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:49:05,047 p=206750 u=morteza n=ansible | TASK [mariadb : set sysctl] **********************************************************************************************************************************
+2023-06-06 08:49:06,270 p=206750 u=morteza n=ansible | changed: [db.sudoer.net] => (item={'name': 'net.ipv4.ip_forward', 'value': '0'})
+2023-06-06 08:49:06,280 p=206750 u=morteza n=ansible | TASK [mariadb : Install the latest version packages] *********************************************************************************************************
+2023-06-06 08:49:23,516 p=206750 u=morteza n=ansible | changed: [db.sudoer.net] => (item=['mariadb-server', 'mariadb-client', 'python3-mysqldb', 'percona-toolkit'])
+2023-06-06 08:49:23,526 p=206750 u=morteza n=ansible | TASK [mariadb : Update all packages] *************************************************************************************************************************
+2023-06-06 08:49:27,508 p=206750 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:49:27,516 p=206750 u=morteza n=ansible | TASK [mariadb : check if config file exist] ******************************************************************************************************************
+2023-06-06 08:49:28,671 p=206750 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:49:28,680 p=206750 u=morteza n=ansible | TASK [mariadb : Generate mysql root pass] ********************************************************************************************************************
+2023-06-06 08:49:28,718 p=206750 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:49:28,727 p=206750 u=morteza n=ansible | TASK [mariadb : Removes anonymous users] *********************************************************************************************************************
+2023-06-06 08:49:30,021 p=206750 u=morteza n=ansible | ok: [db.sudoer.net] => (item=127.0.0.1)
+2023-06-06 08:49:31,098 p=206750 u=morteza n=ansible | ok: [db.sudoer.net] => (item=localhost)
+2023-06-06 08:49:31,111 p=206750 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf {{ instance.name }}] ***********************************************************************************************************
+2023-06-06 08:49:33,419 p=206750 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:49:33,427 p=206750 u=morteza n=ansible | TASK [mariadb : Update MariaDB root password] ****************************************************************************************************************
+2023-06-06 08:49:34,539 p=206750 u=morteza n=ansible | changed: [db.sudoer.net] => (item=127.0.0.1)
+2023-06-06 08:49:35,634 p=206750 u=morteza n=ansible | changed: [db.sudoer.net] => (item=localhost)
+2023-06-06 08:49:35,643 p=206750 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf {{ user.name }}] ***************************************************************************************************************
+2023-06-06 08:49:37,963 p=206750 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:49:37,971 p=206750 u=morteza n=ansible | TASK [mariadb : configuring instances] ***********************************************************************************************************************
+2023-06-06 08:49:37,999 p=206750 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/mariadb/tasks/database.yml for db.sudoer.net => (item={'name': 'sudoer_net'})
+2023-06-06 08:49:38,010 p=206750 u=morteza n=ansible | TASK [mariadb : Create databases sudoer_net] *****************************************************************************************************************
+2023-06-06 08:49:39,235 p=206750 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:49:39,245 p=206750 u=morteza n=ansible | TASK [mariadb : configuring users] ***************************************************************************************************************************
+2023-06-06 08:49:39,270 p=206750 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/mariadb/tasks/users.yml for db.sudoer.net => (item={'name': 'sudoer_user', 'priv': ['sudoer_net.*:ALL,GRANT']})
+2023-06-06 08:49:39,281 p=206750 u=morteza n=ansible | TASK [mariadb : check if config file exist] ******************************************************************************************************************
+2023-06-06 08:49:40,332 p=206750 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:49:40,341 p=206750 u=morteza n=ansible | TASK [mariadb : Generate mysql root pass] ********************************************************************************************************************
+2023-06-06 08:49:40,378 p=206750 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:49:40,390 p=206750 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf sudoer_user] *******************************************************************************************************************
+2023-06-06 08:49:42,846 p=206750 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:49:42,857 p=206750 u=morteza n=ansible | TASK [mariadb : Create database user "sudoer_user"] **********************************************************************************************************
+2023-06-06 08:49:44,275 p=206750 u=morteza n=ansible | changed: [db.sudoer.net] => (item=sudoer_net.*:ALL,GRANT)
+2023-06-06 08:49:44,302 p=206750 u=morteza n=ansible | RUNNING HANDLER [iptables : restart iptables] ****************************************************************************************************************
+2023-06-06 08:49:46,063 p=206750 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:49:46,072 p=206750 u=morteza n=ansible | RUNNING HANDLER [fail2ban : restart fail2ban] ****************************************************************************************************************
+2023-06-06 08:49:48,216 p=206750 u=morteza n=ansible | changed: [db.sudoer.net]
+2023-06-06 08:49:48,224 p=206750 u=morteza n=ansible | RUNNING HANDLER [mariadb : restart mariadb] ******************************************************************************************************************
+2023-06-06 08:49:49,507 p=206750 u=morteza n=ansible | fatal: [db.sudoer.net]: FAILED! => {"changed": false, "msg": "value of state must be one of: reloaded, restarted, started, stopped, got: restart"}
+2023-06-06 08:49:49,509 p=206750 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 08:49:49,509 p=206750 u=morteza n=ansible | db.sudoer.net              : ok=28   changed=17   unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:51:12,354 p=207647 u=morteza n=ansible | PLAY [db] ****************************************************************************************************************************************************
+2023-06-06 08:51:12,367 p=207647 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:51:15,429 p=207647 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:51:15,448 p=207647 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:51:18,415 p=207647 u=morteza n=ansible | ok: [db.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:51:18,428 p=207647 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:51:22,520 p=207647 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:51:22,536 p=207647 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:51:24,193 p=207647 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:51:24,204 p=207647 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:51:26,563 p=207647 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:51:26,572 p=207647 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:51:27,708 p=207647 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:51:27,716 p=207647 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:51:29,752 p=207647 u=morteza n=ansible | ok: [db.sudoer.net] => (item=setup.sh)
+2023-06-06 08:51:31,958 p=207647 u=morteza n=ansible | ok: [db.sudoer.net] => (item=config)
+2023-06-06 08:51:31,976 p=207647 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:51:34,716 p=207647 u=morteza n=ansible | ok: [db.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:51:34,732 p=207647 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:51:38,913 p=207647 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:51:38,928 p=207647 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:51:40,925 p=207647 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:51:40,940 p=207647 u=morteza n=ansible | TASK [mariadb : set sysctl] **********************************************************************************************************************************
+2023-06-06 08:51:42,307 p=207647 u=morteza n=ansible | ok: [db.sudoer.net] => (item={'name': 'net.ipv4.ip_forward', 'value': '0'})
+2023-06-06 08:51:42,316 p=207647 u=morteza n=ansible | TASK [mariadb : Install the latest version packages] *********************************************************************************************************
+2023-06-06 08:51:45,248 p=207647 u=morteza n=ansible | ok: [db.sudoer.net] => (item=['mariadb-server', 'mariadb-client', 'python3-mysqldb', 'percona-toolkit'])
+2023-06-06 08:51:45,258 p=207647 u=morteza n=ansible | TASK [mariadb : Update all packages] *************************************************************************************************************************
+2023-06-06 08:51:49,368 p=207647 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:51:49,376 p=207647 u=morteza n=ansible | TASK [mariadb : check if config file exist] ******************************************************************************************************************
+2023-06-06 08:51:50,493 p=207647 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:51:50,500 p=207647 u=morteza n=ansible | TASK [mariadb : Generate mysql root pass] ********************************************************************************************************************
+2023-06-06 08:51:50,519 p=207647 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:51:50,526 p=207647 u=morteza n=ansible | TASK [mariadb : Removes anonymous users] *********************************************************************************************************************
+2023-06-06 08:51:51,823 p=207647 u=morteza n=ansible | ok: [db.sudoer.net] => (item=127.0.0.1)
+2023-06-06 08:51:52,902 p=207647 u=morteza n=ansible | ok: [db.sudoer.net] => (item=localhost)
+2023-06-06 08:51:52,917 p=207647 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf {{ instance.name }}] ***********************************************************************************************************
+2023-06-06 08:51:52,933 p=207647 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:51:52,941 p=207647 u=morteza n=ansible | TASK [mariadb : Update MariaDB root password] ****************************************************************************************************************
+2023-06-06 08:51:52,968 p=207647 u=morteza n=ansible | skipping: [db.sudoer.net] => (item=127.0.0.1) 
+2023-06-06 08:51:52,970 p=207647 u=morteza n=ansible | skipping: [db.sudoer.net] => (item=localhost) 
+2023-06-06 08:51:52,971 p=207647 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:51:52,980 p=207647 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf {{ user.name }}] ***************************************************************************************************************
+2023-06-06 08:51:54,909 p=207647 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:51:54,916 p=207647 u=morteza n=ansible | TASK [mariadb : configuring instances] ***********************************************************************************************************************
+2023-06-06 08:51:54,943 p=207647 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/mariadb/tasks/database.yml for db.sudoer.net => (item={'name': 'sudoer_net'})
+2023-06-06 08:51:54,951 p=207647 u=morteza n=ansible | TASK [mariadb : Create databases sudoer_net] *****************************************************************************************************************
+2023-06-06 08:51:56,334 p=207647 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:51:56,343 p=207647 u=morteza n=ansible | TASK [mariadb : configuring users] ***************************************************************************************************************************
+2023-06-06 08:51:56,376 p=207647 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/mariadb/tasks/users.yml for db.sudoer.net => (item={'name': 'sudoer_user', 'priv': ['sudoer_net.*:ALL,GRANT']})
+2023-06-06 08:51:56,385 p=207647 u=morteza n=ansible | TASK [mariadb : check if config file exist] ******************************************************************************************************************
+2023-06-06 08:51:57,487 p=207647 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 08:51:57,496 p=207647 u=morteza n=ansible | TASK [mariadb : Generate mysql root pass] ********************************************************************************************************************
+2023-06-06 08:51:57,516 p=207647 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:51:57,529 p=207647 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf sudoer_user] *******************************************************************************************************************
+2023-06-06 08:51:57,548 p=207647 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:51:57,558 p=207647 u=morteza n=ansible | TASK [mariadb : Create database user "sudoer_user"] **********************************************************************************************************
+2023-06-06 08:51:57,577 p=207647 u=morteza n=ansible | skipping: [db.sudoer.net] => (item=sudoer_net.*:ALL,GRANT) 
+2023-06-06 08:51:57,578 p=207647 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 08:51:57,610 p=207647 u=morteza n=ansible | PLAY [app] ***************************************************************************************************************************************************
+2023-06-06 08:51:57,628 p=207647 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:52:00,193 p=207647 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:52:00,294 p=207647 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:52:00,329 p=207647 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:52:17,178 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:52:21,027 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:52:21,035 p=207647 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:52:27,369 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:52:29,044 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:52:29,050 p=207647 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:52:30,209 p=207647 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:52:30,362 p=207647 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:52:30,370 p=207647 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:52:32,052 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:52:32,155 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:52:32,162 p=207647 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:52:32,848 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:52:32,925 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:52:32,935 p=207647 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:52:34,422 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=setup.sh)
+2023-06-06 08:52:34,519 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=setup.sh)
+2023-06-06 08:52:35,741 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=config)
+2023-06-06 08:52:36,074 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=config)
+2023-06-06 08:52:36,100 p=207647 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:52:42,817 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:52:44,808 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:52:44,815 p=207647 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:52:48,824 p=207647 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:52:50,144 p=207647 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:52:50,151 p=207647 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:52:51,606 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:52:51,757 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:52:51,778 p=207647 u=morteza n=ansible | TASK [nginx : Install the latest version packages] ***********************************************************************************************************
+2023-06-06 08:53:06,970 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:53:09,936 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:53:09,946 p=207647 u=morteza n=ansible | TASK [nginx : Update all packages] ***************************************************************************************************************************
+2023-06-06 08:53:14,015 p=207647 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:53:15,192 p=207647 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:53:15,203 p=207647 u=morteza n=ansible | TASK [nginx : Create directory if it does not exist] *********************************************************************************************************
+2023-06-06 08:53:16,066 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:53:16,111 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:53:16,736 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:53:16,823 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:53:16,831 p=207647 u=morteza n=ansible | TASK [nginx : nginx config for {{ instance.domain }}] ********************************************************************************************************
+2023-06-06 08:53:18,596 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:53:18,723 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:53:18,730 p=207647 u=morteza n=ansible | TASK [nginx : configuring instances] *************************************************************************************************************************
+2023-06-06 08:53:18,775 p=207647 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/nginx/tasks/instances.yml for app1.sudoer.net, app2.sudoer.net => (item={'domain': 'app.sudoer.net', 'email': 'morteza.bashsiz@gmail.com', 'root': '/home/www-data/app.sudoer.net/www/wordpress'})
+2023-06-06 08:53:18,786 p=207647 u=morteza n=ansible | TASK [nginx : nginx config for app.sudoer.net] ***************************************************************************************************************
+2023-06-06 08:53:20,294 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:53:20,490 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:53:20,503 p=207647 u=morteza n=ansible | TASK [nginx : nginx config for app.sudoer.net] ***************************************************************************************************************
+2023-06-06 08:53:22,007 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:53:22,097 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:53:22,120 p=207647 u=morteza n=ansible | TASK [php-fpm : Install the latest version packages] *********************************************************************************************************
+2023-06-06 08:53:43,711 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net] => (item=['php7.4-fpm', 'php7.4-mysql', 'php7.4-gd'])
+2023-06-06 08:53:48,017 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net] => (item=['php7.4-fpm', 'php7.4-mysql', 'php7.4-gd'])
+2023-06-06 08:53:48,025 p=207647 u=morteza n=ansible | TASK [php-fpm : Update all packages] *************************************************************************************************************************
+2023-06-06 08:53:52,257 p=207647 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:53:53,434 p=207647 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:53:53,454 p=207647 u=morteza n=ansible | TASK [wordpress : configuring instances] *********************************************************************************************************************
+2023-06-06 08:53:53,504 p=207647 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/wordpress/tasks/instances.yml for app1.sudoer.net, app2.sudoer.net => (item={'name': 'app.sudoer.net', 'db': 'sudoer_net', 'db_user': 'sudoer_user', 'db_host': 'db.sudoer.net', 'db_charset': 'utf8'})
+2023-06-06 08:53:53,512 p=207647 u=morteza n=ansible | TASK [wordpress : check if www dir exists app.sudoer.net] ****************************************************************************************************
+2023-06-06 08:53:54,257 p=207647 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 08:53:54,323 p=207647 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 08:53:54,333 p=207647 u=morteza n=ansible | TASK [wordpress : Create home directory for instance app.sudoer.net] *****************************************************************************************
+2023-06-06 08:53:55,052 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:53:55,116 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:53:55,124 p=207647 u=morteza n=ansible | TASK [wordpress : Unarchive wordpress latest] ****************************************************************************************************************
+2023-06-06 08:54:00,718 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:54:01,119 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:54:01,129 p=207647 u=morteza n=ansible | TASK [wordpress : change owner of wordpress instance app.sudoer.net] *****************************************************************************************
+2023-06-06 08:54:02,094 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:54:02,241 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:54:02,248 p=207647 u=morteza n=ansible | TASK [wordpress : check if config file exists app.sudoer.net] ************************************************************************************************
+2023-06-06 08:54:04,511 p=207647 u=morteza n=ansible | ok: [app1.sudoer.net -> db.sudoer.net]
+2023-06-06 08:54:04,513 p=207647 u=morteza n=ansible | ok: [app2.sudoer.net -> db.sudoer.net]
+2023-06-06 08:54:04,520 p=207647 u=morteza n=ansible | TASK [wordpress : Get wp pass] *******************************************************************************************************************************
+2023-06-06 08:54:05,808 p=207647 u=morteza n=ansible | ok: [app1.sudoer.net -> db.sudoer.net]
+2023-06-06 08:54:05,843 p=207647 u=morteza n=ansible | ok: [app2.sudoer.net -> db.sudoer.net]
+2023-06-06 08:54:05,853 p=207647 u=morteza n=ansible | TASK [wordpress : wordpress config file] *********************************************************************************************************************
+2023-06-06 08:54:07,296 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:54:07,464 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:54:07,522 p=207647 u=morteza n=ansible | RUNNING HANDLER [iptables : restart iptables] ****************************************************************************************************************
+2023-06-06 08:54:09,040 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:54:09,186 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:54:09,194 p=207647 u=morteza n=ansible | RUNNING HANDLER [fail2ban : restart fail2ban] ****************************************************************************************************************
+2023-06-06 08:54:10,873 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:54:10,890 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:54:10,918 p=207647 u=morteza n=ansible | RUNNING HANDLER [nginx : reload nginx] ***********************************************************************************************************************
+2023-06-06 08:54:12,403 p=207647 u=morteza n=ansible | changed: [app1.sudoer.net]
+2023-06-06 08:54:12,657 p=207647 u=morteza n=ansible | changed: [app2.sudoer.net]
+2023-06-06 08:54:12,691 p=207647 u=morteza n=ansible | PLAY [lb] ****************************************************************************************************************************************************
+2023-06-06 08:54:12,702 p=207647 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 08:54:15,018 p=207647 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:54:15,035 p=207647 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:55:05,035 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 08:55:05,046 p=207647 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 08:55:10,588 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:55:10,596 p=207647 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 08:55:11,585 p=207647 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:55:11,594 p=207647 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 08:55:13,077 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:55:13,086 p=207647 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 08:55:13,741 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:55:13,748 p=207647 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 08:55:15,056 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=setup.sh)
+2023-06-06 08:55:16,426 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=config)
+2023-06-06 08:55:16,443 p=207647 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 08:55:22,293 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=['fail2ban'])
+2023-06-06 08:55:22,305 p=207647 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 08:55:25,871 p=207647 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:55:25,878 p=207647 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 08:55:27,308 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:55:27,323 p=207647 u=morteza n=ansible | TASK [loadbalancer : Install the latest version packages] ****************************************************************************************************
+2023-06-06 08:55:41,300 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 08:55:41,311 p=207647 u=morteza n=ansible | TASK [loadbalancer : Update all packages] ********************************************************************************************************************
+2023-06-06 08:55:44,859 p=207647 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 08:55:44,867 p=207647 u=morteza n=ansible | TASK [loadbalancer : Create directory if it does not exist] **************************************************************************************************
+2023-06-06 08:55:45,522 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 08:55:46,174 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 08:55:46,188 p=207647 u=morteza n=ansible | TASK [loadbalancer : nginx config override] ******************************************************************************************************************
+2023-06-06 08:55:47,617 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:55:47,629 p=207647 u=morteza n=ansible | TASK [loadbalancer : nginx config conf.d] ********************************************************************************************************************
+2023-06-06 08:55:49,002 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:55:49,028 p=207647 u=morteza n=ansible | RUNNING HANDLER [iptables : restart iptables] ****************************************************************************************************************
+2023-06-06 08:55:49,984 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:55:49,992 p=207647 u=morteza n=ansible | RUNNING HANDLER [fail2ban : restart fail2ban] ****************************************************************************************************************
+2023-06-06 08:55:51,634 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:55:51,652 p=207647 u=morteza n=ansible | RUNNING HANDLER [loadbalancer : reload nginx] ****************************************************************************************************************
+2023-06-06 08:55:52,923 p=207647 u=morteza n=ansible | changed: [lb.sudoer.net]
+2023-06-06 08:55:52,941 p=207647 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 08:55:52,941 p=207647 u=morteza n=ansible | app1.sudoer.net            : ok=30   changed=20   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:55:52,942 p=207647 u=morteza n=ansible | app2.sudoer.net            : ok=30   changed=20   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-06 08:55:52,942 p=207647 u=morteza n=ansible | db.sudoer.net              : ok=20   changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2023-06-06 08:55:52,942 p=207647 u=morteza n=ansible | lb.sudoer.net              : ok=18   changed=14   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-06 09:07:42,374 p=210881 u=morteza n=ansible | PLAY [db] ****************************************************************************************************************************************************
+2023-06-06 09:07:42,389 p=210881 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 09:07:45,352 p=210881 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 09:07:45,374 p=210881 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 09:07:48,303 p=210881 u=morteza n=ansible | ok: [db.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 09:07:48,315 p=210881 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 09:07:52,389 p=210881 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 09:07:52,396 p=210881 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 09:07:54,078 p=210881 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 09:07:54,085 p=210881 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 09:07:56,291 p=210881 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 09:07:56,299 p=210881 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 09:07:57,365 p=210881 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 09:07:57,372 p=210881 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 09:07:59,268 p=210881 u=morteza n=ansible | ok: [db.sudoer.net] => (item=setup.sh)
+2023-06-06 09:08:01,199 p=210881 u=morteza n=ansible | ok: [db.sudoer.net] => (item=config)
+2023-06-06 09:08:01,215 p=210881 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 09:08:03,954 p=210881 u=morteza n=ansible | ok: [db.sudoer.net] => (item=['fail2ban'])
+2023-06-06 09:08:03,965 p=210881 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 09:08:08,552 p=210881 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 09:08:08,559 p=210881 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 09:08:10,551 p=210881 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 09:08:10,569 p=210881 u=morteza n=ansible | TASK [mariadb : set sysctl] **********************************************************************************************************************************
+2023-06-06 09:08:11,755 p=210881 u=morteza n=ansible | ok: [db.sudoer.net] => (item={'name': 'net.ipv4.ip_forward', 'value': '0'})
+2023-06-06 09:08:11,763 p=210881 u=morteza n=ansible | TASK [mariadb : Install the latest version packages] *********************************************************************************************************
+2023-06-06 09:08:14,637 p=210881 u=morteza n=ansible | ok: [db.sudoer.net] => (item=['mariadb-server', 'mariadb-client', 'python3-mysqldb', 'percona-toolkit'])
+2023-06-06 09:08:14,646 p=210881 u=morteza n=ansible | TASK [mariadb : Update all packages] *************************************************************************************************************************
+2023-06-06 09:08:19,020 p=210881 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 09:08:19,026 p=210881 u=morteza n=ansible | TASK [mariadb : check if config file exist] ******************************************************************************************************************
+2023-06-06 09:08:20,123 p=210881 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 09:08:20,130 p=210881 u=morteza n=ansible | TASK [mariadb : Generate mysql root pass] ********************************************************************************************************************
+2023-06-06 09:08:20,147 p=210881 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 09:08:20,154 p=210881 u=morteza n=ansible | TASK [mariadb : Removes anonymous users] *********************************************************************************************************************
+2023-06-06 09:08:21,437 p=210881 u=morteza n=ansible | ok: [db.sudoer.net] => (item=127.0.0.1)
+2023-06-06 09:08:22,506 p=210881 u=morteza n=ansible | ok: [db.sudoer.net] => (item=localhost)
+2023-06-06 09:08:22,516 p=210881 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf {{ instance.name }}] ***********************************************************************************************************
+2023-06-06 09:08:22,532 p=210881 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 09:08:22,543 p=210881 u=morteza n=ansible | TASK [mariadb : Update MariaDB root password] ****************************************************************************************************************
+2023-06-06 09:08:22,565 p=210881 u=morteza n=ansible | skipping: [db.sudoer.net] => (item=127.0.0.1) 
+2023-06-06 09:08:22,565 p=210881 u=morteza n=ansible | skipping: [db.sudoer.net] => (item=localhost) 
+2023-06-06 09:08:22,566 p=210881 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 09:08:22,578 p=210881 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf {{ user.name }}] ***************************************************************************************************************
+2023-06-06 09:08:24,582 p=210881 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 09:08:24,588 p=210881 u=morteza n=ansible | TASK [mariadb : configuring instances] ***********************************************************************************************************************
+2023-06-06 09:08:24,611 p=210881 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/mariadb/tasks/database.yml for db.sudoer.net => (item={'name': 'sudoer_net'})
+2023-06-06 09:08:24,619 p=210881 u=morteza n=ansible | TASK [mariadb : Create databases sudoer_net] *****************************************************************************************************************
+2023-06-06 09:08:25,907 p=210881 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 09:08:25,944 p=210881 u=morteza n=ansible | TASK [mariadb : configuring users] ***************************************************************************************************************************
+2023-06-06 09:08:26,012 p=210881 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/mariadb/tasks/users.yml for db.sudoer.net => (item={'name': 'sudoer_user', 'priv': ['sudoer_net.*:ALL,GRANT']})
+2023-06-06 09:08:26,021 p=210881 u=morteza n=ansible | TASK [mariadb : check if config file exist] ******************************************************************************************************************
+2023-06-06 09:08:27,120 p=210881 u=morteza n=ansible | ok: [db.sudoer.net]
+2023-06-06 09:08:27,126 p=210881 u=morteza n=ansible | TASK [mariadb : Generate mysql root pass] ********************************************************************************************************************
+2023-06-06 09:08:27,142 p=210881 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 09:08:27,149 p=210881 u=morteza n=ansible | TASK [mariadb : mysql .my.cnf sudoer_user] *******************************************************************************************************************
+2023-06-06 09:08:27,163 p=210881 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 09:08:27,170 p=210881 u=morteza n=ansible | TASK [mariadb : Create database user "sudoer_user"] **********************************************************************************************************
+2023-06-06 09:08:27,188 p=210881 u=morteza n=ansible | skipping: [db.sudoer.net] => (item=sudoer_net.*:ALL,GRANT) 
+2023-06-06 09:08:27,190 p=210881 u=morteza n=ansible | skipping: [db.sudoer.net]
+2023-06-06 09:08:27,216 p=210881 u=morteza n=ansible | PLAY [app] ***************************************************************************************************************************************************
+2023-06-06 09:08:27,230 p=210881 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 09:08:29,298 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:08:29,490 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:08:29,521 p=210881 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 09:08:31,887 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 09:08:33,030 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 09:08:33,038 p=210881 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 09:08:37,081 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:08:38,842 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:08:38,848 p=210881 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 09:08:39,925 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:08:40,232 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:08:40,240 p=210881 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 09:08:41,600 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:08:41,776 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:08:41,784 p=210881 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 09:08:42,514 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:08:42,543 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:08:42,549 p=210881 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 09:08:43,897 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=setup.sh)
+2023-06-06 09:08:43,992 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=setup.sh)
+2023-06-06 09:08:45,077 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=config)
+2023-06-06 09:08:45,330 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=config)
+2023-06-06 09:08:45,350 p=210881 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 09:08:47,824 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=['fail2ban'])
+2023-06-06 09:08:48,773 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=['fail2ban'])
+2023-06-06 09:08:48,781 p=210881 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 09:08:52,504 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:08:54,025 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:08:54,030 p=210881 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 09:08:55,311 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:08:55,466 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:08:55,496 p=210881 u=morteza n=ansible | TASK [nginx : Install the latest version packages] ***********************************************************************************************************
+2023-06-06 09:08:58,008 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 09:08:58,767 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 09:08:58,777 p=210881 u=morteza n=ansible | TASK [nginx : Update all packages] ***************************************************************************************************************************
+2023-06-06 09:09:03,133 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:09:04,041 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:09:04,048 p=210881 u=morteza n=ansible | TASK [nginx : Create directory if it does not exist] *********************************************************************************************************
+2023-06-06 09:09:04,765 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 09:09:04,842 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 09:09:05,417 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 09:09:05,579 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 09:09:05,591 p=210881 u=morteza n=ansible | TASK [nginx : nginx config for {{ instance.domain }}] ********************************************************************************************************
+2023-06-06 09:09:06,783 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:09:06,926 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:09:06,933 p=210881 u=morteza n=ansible | TASK [nginx : configuring instances] *************************************************************************************************************************
+2023-06-06 09:09:06,991 p=210881 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/nginx/tasks/instances.yml for app1.sudoer.net, app2.sudoer.net => (item={'domain': 'app.sudoer.net', 'email': 'morteza.bashsiz@gmail.com', 'root': '/home/www-data/app.sudoer.net/www/wordpress'})
+2023-06-06 09:09:07,006 p=210881 u=morteza n=ansible | TASK [nginx : nginx config for app.sudoer.net] ***************************************************************************************************************
+2023-06-06 09:09:08,334 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:09:08,444 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:09:08,451 p=210881 u=morteza n=ansible | TASK [nginx : nginx config for app.sudoer.net] ***************************************************************************************************************
+2023-06-06 09:09:09,728 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:09:09,839 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:09:09,858 p=210881 u=morteza n=ansible | TASK [php-fpm : Install the latest version packages] *********************************************************************************************************
+2023-06-06 09:09:12,474 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net] => (item=['php7.4-fpm', 'php7.4-mysql', 'php7.4-gd'])
+2023-06-06 09:09:12,984 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net] => (item=['php7.4-fpm', 'php7.4-mysql', 'php7.4-gd'])
+2023-06-06 09:09:12,993 p=210881 u=morteza n=ansible | TASK [php-fpm : Update all packages] *************************************************************************************************************************
+2023-06-06 09:09:16,839 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:09:18,348 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:09:18,368 p=210881 u=morteza n=ansible | TASK [wordpress : configuring instances] *********************************************************************************************************************
+2023-06-06 09:09:18,413 p=210881 u=morteza n=ansible | included: /home/morteza/data/git/MortezaBashsiz/YouTube/Ansible/roles/wordpress/tasks/instances.yml for app1.sudoer.net, app2.sudoer.net => (item={'name': 'app.sudoer.net', 'db': 'sudoer_net', 'db_user': 'sudoer_user', 'db_host': 'db.sudoer.net', 'db_charset': 'utf8'})
+2023-06-06 09:09:18,421 p=210881 u=morteza n=ansible | TASK [wordpress : check if www dir exists app.sudoer.net] ****************************************************************************************************
+2023-06-06 09:09:19,187 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:09:19,244 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:09:19,254 p=210881 u=morteza n=ansible | TASK [wordpress : Create home directory for instance app.sudoer.net] *****************************************************************************************
+2023-06-06 09:09:20,044 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:09:20,093 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:09:20,100 p=210881 u=morteza n=ansible | TASK [wordpress : Unarchive wordpress latest] ****************************************************************************************************************
+2023-06-06 09:09:20,122 p=210881 u=morteza n=ansible | skipping: [app1.sudoer.net]
+2023-06-06 09:09:20,131 p=210881 u=morteza n=ansible | skipping: [app2.sudoer.net]
+2023-06-06 09:09:20,144 p=210881 u=morteza n=ansible | TASK [wordpress : change owner of wordpress instance app.sudoer.net] *****************************************************************************************
+2023-06-06 09:09:20,169 p=210881 u=morteza n=ansible | skipping: [app1.sudoer.net]
+2023-06-06 09:09:20,179 p=210881 u=morteza n=ansible | skipping: [app2.sudoer.net]
+2023-06-06 09:09:20,189 p=210881 u=morteza n=ansible | TASK [wordpress : check if config file exists app.sudoer.net] ************************************************************************************************
+2023-06-06 09:09:21,613 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net -> db.sudoer.net]
+2023-06-06 09:09:21,614 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net -> db.sudoer.net]
+2023-06-06 09:09:21,621 p=210881 u=morteza n=ansible | TASK [wordpress : Get wp pass] *******************************************************************************************************************************
+2023-06-06 09:09:22,908 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net -> db.sudoer.net]
+2023-06-06 09:09:22,928 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net -> db.sudoer.net]
+2023-06-06 09:09:22,934 p=210881 u=morteza n=ansible | TASK [wordpress : wordpress config file] *********************************************************************************************************************
+2023-06-06 09:09:24,175 p=210881 u=morteza n=ansible | ok: [app1.sudoer.net]
+2023-06-06 09:09:24,281 p=210881 u=morteza n=ansible | ok: [app2.sudoer.net]
+2023-06-06 09:09:24,336 p=210881 u=morteza n=ansible | PLAY [lb] ****************************************************************************************************************************************************
+2023-06-06 09:09:24,348 p=210881 u=morteza n=ansible | TASK [Gathering Facts] ***************************************************************************************************************************************
+2023-06-06 09:09:26,240 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 09:09:26,260 p=210881 u=morteza n=ansible | TASK [iptables : Install the latest version packages] ********************************************************************************************************
+2023-06-06 09:09:28,796 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['htop', 'net-tools', 'iptables-persistent', 'vim'])
+2023-06-06 09:09:28,807 p=210881 u=morteza n=ansible | TASK [iptables : Update all packages] ************************************************************************************************************************
+2023-06-06 09:09:32,801 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 09:09:32,808 p=210881 u=morteza n=ansible | TASK [iptables : reload iptables] ****************************************************************************************************************************
+2023-06-06 09:09:33,798 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 09:09:33,809 p=210881 u=morteza n=ansible | TASK [iptables : iptables config] ****************************************************************************************************************************
+2023-06-06 09:09:35,043 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 09:09:35,050 p=210881 u=morteza n=ansible | TASK [iptables : Create directory if it does not exist] ******************************************************************************************************
+2023-06-06 09:09:35,728 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 09:09:35,733 p=210881 u=morteza n=ansible | TASK [iptables : Copy internal scripts] **********************************************************************************************************************
+2023-06-06 09:09:36,994 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=setup.sh)
+2023-06-06 09:09:38,145 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=config)
+2023-06-06 09:09:38,162 p=210881 u=morteza n=ansible | TASK [fail2ban : Install the latest version packages] ********************************************************************************************************
+2023-06-06 09:09:40,560 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['fail2ban'])
+2023-06-06 09:09:40,567 p=210881 u=morteza n=ansible | TASK [fail2ban : Update all packages] ************************************************************************************************************************
+2023-06-06 09:09:44,007 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 09:09:44,014 p=210881 u=morteza n=ansible | TASK [fail2ban : fail2ban config for ssh] ********************************************************************************************************************
+2023-06-06 09:09:45,192 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 09:09:45,203 p=210881 u=morteza n=ansible | TASK [loadbalancer : Install the latest version packages] ****************************************************************************************************
+2023-06-06 09:09:47,311 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=['nginx', 'certbot', 'python3-certbot-nginx'])
+2023-06-06 09:09:47,317 p=210881 u=morteza n=ansible | TASK [loadbalancer : Update all packages] ********************************************************************************************************************
+2023-06-06 09:09:50,774 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 09:09:50,784 p=210881 u=morteza n=ansible | TASK [loadbalancer : Create directory if it does not exist] **************************************************************************************************
+2023-06-06 09:09:51,439 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/nginx/specific-conf.d/)
+2023-06-06 09:09:52,031 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net] => (item=/etc/systemd/system/nginx.service.d/)
+2023-06-06 09:09:52,042 p=210881 u=morteza n=ansible | TASK [loadbalancer : nginx config override] ******************************************************************************************************************
+2023-06-06 09:09:53,333 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 09:09:53,339 p=210881 u=morteza n=ansible | TASK [loadbalancer : nginx config conf.d] ********************************************************************************************************************
+2023-06-06 09:09:54,473 p=210881 u=morteza n=ansible | ok: [lb.sudoer.net]
+2023-06-06 09:09:54,498 p=210881 u=morteza n=ansible | PLAY RECAP ***************************************************************************************************************************************************
+2023-06-06 09:09:54,498 p=210881 u=morteza n=ansible | app1.sudoer.net            : ok=25   changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-06-06 09:09:54,498 p=210881 u=morteza n=ansible | app2.sudoer.net            : ok=25   changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-06-06 09:09:54,498 p=210881 u=morteza n=ansible | db.sudoer.net              : ok=20   changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2023-06-06 09:09:54,498 p=210881 u=morteza n=ansible | lb.sudoer.net              : ok=15   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

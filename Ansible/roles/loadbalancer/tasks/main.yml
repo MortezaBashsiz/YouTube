@@ -1,0 +1,45 @@
+---
+
+- name: Install the latest version packages
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+  loop:
+    - "{{ NGINX_PKGS_LIST }}"
+  tags:
+    - pkg
+
+- name: Update all packages
+  apt:
+    name: "*"
+    state: latest
+  tags:
+    - pkg
+
+- name: Create directory if it does not exist
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+  with_items:
+    - /etc/nginx/specific-conf.d/
+    - /etc/systemd/system/nginx.service.d/
+
+- name: nginx config override
+  template:
+    src: etc/systemd/system/nginx.service.d/override.conf.j2
+    dest: /etc/systemd/system/nginx.service.d/override.conf
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: nginx config conf.d
+  template:
+    src: etc/nginx/conf.d/lb.conf
+    dest: /etc/nginx/conf.d/lb.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    reload nginx

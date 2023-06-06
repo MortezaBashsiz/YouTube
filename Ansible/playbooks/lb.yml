@@ -1,0 +1,14 @@
+---
+
+- hosts: lb
+  roles:
+    - role: iptables
+      tags:
+        - firewall
+        - iptables
+    - role: fail2ban
+      tags:
+        - fail2ban
+    - role: loadbalancer
+      tags:
+        - loadbalancer

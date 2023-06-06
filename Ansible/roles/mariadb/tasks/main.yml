@@ -74,6 +74,8 @@
     owner: root
     group: root
     mode: '0600'
+  notify:
+    restart mariadb
 
 - name: configuring instances
   include_tasks: database.yml

@@ -34,20 +34,3 @@
     mode: '0644'
   notify:
     - restart iptables
-
-- name: Create directory if it does not exist
-  file:
-    path: /opt/internal_setup/
-    state: directory
-    mode: '0755'
-
-- name: Copy internal scripts
-  copy:
-    src: opt/internal_setup/{{ item }}
-    dest: /opt/internal_setup/{{ item }}
-    owner: root
-    group: root
-  with_items:
-    - setup.sh  
-    - config 
-
