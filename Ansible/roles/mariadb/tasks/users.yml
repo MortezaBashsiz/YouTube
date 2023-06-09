@@ -1,0 +1,32 @@
+---
+
+- name: check if config file exist
+  stat:
+    path: /root/.my.cnf-{{ user.name }}
+  register: config_file
+
+- name: Generate mysql root pass
+  set_fact:
+    MARIADB_USER_PASS: "{{ lookup('ansible.builtin.password', '/dev/null chars=ascii_uppercase,ascii_lowercase,digits length=16') }}"
+  when: not config_file.stat.exists
+
+- name: mysql .my.cnf {{ user.name }}
+  template:
+    src: root/my.cnf-user.j2
+    dest: /root/.my.cnf-{{ user.name }}
+    owner: root
+    group: root
+    mode: '0600'
+  when: not config_file.stat.exists
+
+- name: Create database user "{{ user.name }}"
+  mysql_user:
+    host: "%"
+    name: "{{ user.name }}"
+    password: "{{ MARIADB_USER_PASS }}"
+    update_password: on_create
+    priv: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ user.priv }}"
+  when: not config_file.stat.exists

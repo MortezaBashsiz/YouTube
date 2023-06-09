@@ -1,0 +1,5 @@
+---
+
+FAIL2BAN_PKGS_LIST:
+  - fail2ban
+

@@ -1,0 +1,15 @@
+---
+
+MARIADB_PKGS_LIST:
+  - mariadb-server
+  - mariadb-client
+  - python3-mysqldb
+  - percona-toolkit
+
+DB_INSTANCES:
+  - name: test
+
+DB_USERS:
+  - name: test_user
+    priv:
+      - 'test.*:ALL,GRANT'

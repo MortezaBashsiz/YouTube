@@ -82,19 +82,43 @@
     src: var/arsenal/conf/arsenal.conf
     dest: /var/arsenal/conf/arsenal.conf
 
+- name: print all facts
+  debug:
+    msg: "{{ ansible_facts }}"
+  tags:
+    - testwhen
 
+- name: create dir when app
+  file:
+    state: directory
+    path: "/tmp/app"
+  when: "ansible_facts.fqdn == 'app1.sudoer.net' or ansible_facts.fqdn == 'app2.sudoer.net'" 
+  tags:
+    - testwhen
 
+- name: create dir when app in hostname
+  file:
+    state: directory
+    path: "/tmp/appadas"
+  when: "'app' in ansible_facts.fqdn" 
+  tags:
+    - testwhen
 
+- name: create dir when app not in hostname
+  file:
+    state: directory
+    path: "/tmp/notapp"
+  when: "'app' not in ansible_facts.fqdn" 
+  tags:
+    - testwhen
 
-
-
-
-
-
-
-
-
-
+- name: create dir when db
+  file:
+    state: directory
+    path: "/tmp/db"
+  when: "ansible_facts.fqdn == 'db.sudoer.net'" 
+  tags:
+    - testwhen
 
 
 

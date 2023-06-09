@@ -1,0 +1,36 @@
+---
+
+- name: Install the latest version packages
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+  loop:
+    - "{{ IPTABLES_PKGS_LIST }}"
+  tags:
+    - pkg
+
+- name: Update all packages
+  apt:
+    name: "*"
+    state: latest
+  tags:
+    - pkg
+
+- name: reload iptables
+  shell: |
+    iptables -I INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+    iptables -I OUTPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+    systemctl enable iptables
+    iptables-restore < /etc/iptables/rules.v4    
+  changed_when: false
+
+- name: iptables config 
+  template:
+    src: etc/iptables/rules.v4.j2 
+    dest: /etc/iptables/rules.v4
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - restart iptables

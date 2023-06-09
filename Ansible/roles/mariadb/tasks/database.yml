@@ -1,0 +1,7 @@
+---
+
+- name: Create databases {{ instance.name }}
+  mysql_db:
+    name:
+      - "{{ instance.name }}"
+    state: present

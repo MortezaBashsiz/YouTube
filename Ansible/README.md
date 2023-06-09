@@ -44,3 +44,9 @@ The [Ansible Playlist](https://www.youtube.com/playlist?list=PLRMCwJJwWR1AKYcUkd
 13. [Practical Scenario - part 8]( https://youtu.be/ZCX_zaawpgU "Practical Scenario - part 8")
     </br>
     - tags
+14. [Practical Scenario - part 9]( https://youtu.be/ADupLzOY0xs "Practical Scenario - part 9")
+    </br>
+    - when
+15. [Practical Scenario - part 10]( https://youtu.be/8H0eUUPtHdA "Practical Scenario - part 10")
+    </br>
+    - The END

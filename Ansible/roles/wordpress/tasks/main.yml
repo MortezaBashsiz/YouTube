@@ -1,0 +1,8 @@
+---
+
+- name: configuring instances
+  include_tasks: instances.yml
+  loop: "{{ WP_INSTANCES }}"
+  loop_control:
+    loop_var: instance
+

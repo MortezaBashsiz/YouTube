@@ -1,0 +1,8 @@
+---
+
+- name: restart mariadb
+  service:
+    name: mariadb
+    state: restarted
+    enabled: yes
+    daemon_reload: true
