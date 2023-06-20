@@ -10,4 +10,10 @@
    - Concepts of Object Storage and Block Storage 
    - The difference between Object Storage and Block Storage
 3. [Part 3](https://youtu.be/A5eG8BPNqyQ)
-   - How does ceph work - part 1
+   - How does Ceph work - part 1
+   - Talk about :
+       - Replication
+       - Availability
+       - Scalability 
+       - Performance
+       - Failover
