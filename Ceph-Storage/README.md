@@ -17,3 +17,11 @@
        - Scalability 
        - Performance
        - Failover
+4. [Part 4](https://www.youtube.com/watch?v=HMjKEkrhVv0)
+   - How does Ceph work - part 2
+   - Talk about :
+      - OSD, PG (Placement Groups)
+      - Objects , How save Data as Objects
+      - Cluster Map, CRUSH Map, PG Map, OSD Map , ...
+      
+      [![Ceph Part4 image](https://github.com/MortezaBashsiz/YouTube/tree/main/Ceph-Storage/Images/Ceph-4.png?raw=true)](https://github.com/MortezaBashsiz/YouTube/tree/main/Ceph-Storage/Images/Ceph-4.png)
