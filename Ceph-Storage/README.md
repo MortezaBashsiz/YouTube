@@ -17,3 +17,14 @@
        - Scalability 
        - Performance
        - Failover
+4. [Part 4](https://youtu.be/HMjKEkrhVv0)
+   - How does Ceph work - part 2
+   - Talk about :
+       - Architecture
+       - Storage nodes
+5. [Part 5](https://youtu.be/yI_fAlz7mRk)
+   - How does Ceph work - part 3
+   - Talk about :
+       - Architecture
+       - ClusterMap
+       - Cephx
