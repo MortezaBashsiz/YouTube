@@ -28,3 +28,11 @@
        - Architecture
        - ClusterMap
        - Cephx
+5. [Part 6](https://youtu.be/zA8ziAHWktg)
+   - How does Ceph work - part 4
+   - Talk about :
+       - OSD
+       - Pool
+       - PG
+       - Objects
+       - Rebalancing
