@@ -36,3 +36,7 @@
        - PG
        - Objects
        - Rebalancing
+5. [Part 7](https://youtu.be/UqEX16Lq11s)
+   - How does Ceph work - part 5
+   - Talk about :
+       - Replication vs Erasure
