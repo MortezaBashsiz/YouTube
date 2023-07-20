@@ -28,7 +28,7 @@
        - Architecture
        - ClusterMap
        - Cephx
-5. [Part 6](https://youtu.be/zA8ziAHWktg)
+6. [Part 6](https://youtu.be/zA8ziAHWktg)
    - How does Ceph work - part 4
    - Talk about :
        - OSD
@@ -36,7 +36,12 @@
        - PG
        - Objects
        - Rebalancing
-5. [Part 7](https://youtu.be/UqEX16Lq11s)
+7. [Part 7](https://youtu.be/UqEX16Lq11s)
    - How does Ceph work - part 5
    - Talk about :
        - Replication vs Erasure
+8. [Part 8](https://youtu.be/mgKvbUQTwEc)
+   - How does Ceph work - part 6
+   - Talk about :
+       - Erasure calculation
+       - Prepare for install
