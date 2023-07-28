@@ -45,3 +45,9 @@
    - Talk about :
        - Erasure calculation
        - Prepare for install
+9. [Part 9](https://youtu.be/FKK-NSWK4WQ)
+   - Installation - part 1
+   - Talk about :
+       - Installation methods
+       - Differences
+       - Install Mon & Mgr
