@@ -51,3 +51,14 @@
        - Installation methods
        - Differences
        - Install Mon & Mgr
+10. [Part 10](https://youtu.be/BBW5zssdIDU)
+   - Installation - part 2
+   - Talk about :
+       - Installing ceph using ceph-deploy
+11. [Part 11](https://youtu.be/XfJqcV8l8EQ?si=mq1BekNp6cofxEcE)
+   - Concepts
+   - Talk about :
+       - pool
+       - pg
+       - pgp
+       - autoscale
