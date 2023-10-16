@@ -62,3 +62,18 @@
        - pg
        - pgp
        - autoscale
+12. [Part 12](https://youtu.be/yyboJg9ewYQ?si=qZyuW-iALQRtJp_Y)
+   - How to use it?
+   - Talk about :
+       - Create pool, rbd volume and use it in client side
+13. [Part 13](https://youtu.be/ej_LmChH5qo?si=Rf-_sRqHyD60QPzD)
+   - How to use it?
+   - Talk about :
+       - Mount rbd volume permanently on client side
+14. [Part 14](https://youtu.be/1DjWwMt0Pfo?si=-CjxyN02l3NdjzZx)
+   - How is recovery?
+   - Talk about :
+       - CRUSH
+       - PG
+       - Autoscale
+       - Recovery
