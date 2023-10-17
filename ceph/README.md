@@ -77,3 +77,5 @@
        - PG
        - Autoscale
        - Recovery
+15. [Part 15](https://youtu.be/Zi0CZ_0_TA4?si=8X7J57NfIsViHcOi)
+   - Break cluster & effects on client
