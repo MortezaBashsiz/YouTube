@@ -79,3 +79,10 @@
        - Recovery
 15. [Part 15](https://youtu.be/Zi0CZ_0_TA4?si=8X7J57NfIsViHcOi)
    - Break cluster & effects on client
+16. [Part 16](https://youtu.be/282XSai4Ydk?si=fUNxcmOR8v1jTCl8)
+   - Visual tools
+   - Talk about :
+       - Management dashboard
+       - Grafana
+       - Prometheus
+       - Alertmanager
