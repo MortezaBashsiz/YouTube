@@ -86,3 +86,7 @@
        - Grafana
        - Prometheus
        - Alertmanager
+17. [Part 17](https://youtu.be/ImD8ZtdMk-U?si=yH-xBs091gPcbc_L)
+   - Upgrade it
+   - Talk about :
+       - How to upgrade ceph
