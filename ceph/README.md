@@ -90,3 +90,8 @@
    - Upgrade it
    - Talk about :
        - How to upgrade ceph
+18. [Part 18](https://youtu.be/Zt4Uis5-Vok?si=C74Rkpzizu9uhHrF)
+   - Orchestrator
+   - Talk about :
+       - Logic behind Orchestrators
+       - ceph orch and how use it
