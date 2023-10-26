@@ -95,3 +95,20 @@
    - Talk about :
        - Logic behind Orchestrators
        - ceph orch and how use it
+19. [Part 19](https://youtu.be/tSbGlhYRDRo?si=LQwSD92VXd3v2D4g)
+   - Object Storage
+   - Talk about :
+       - Implement RGW
+       - Use S3 with aws-cli
+20. [Part 20](https://youtu.be/9hPihXi4OL8?si=dQQDtNdDT6WkEJT_)
+   - Object Storage
+   - Talk about :
+       - Change config
+       - Use erasure code pool
+21. [Part 21](https://youtu.be/UhwMhZmuNx8?si=p37acMUW3F5Mj8mv)
+   - Ceph FS
+   - Talk about :
+       - Implement MDS
+       - Use it
+22. [Part 22](https://youtu.be/dbqdiTsj7ac?si=ltSWf6msMS02y4Zr)
+   - Design and Hardware
