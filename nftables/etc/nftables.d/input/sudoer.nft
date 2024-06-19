@@ -1,0 +1,6 @@
+ct state invalid log prefix " nft_input_drop_invalid_policy " counter drop;
+iifname "lo" counter accept;
+ct state related,established accept
+tcp dport 22 counter accept;
+tcp dport 80 counter accept;
+tcp dport 443 counter accept;

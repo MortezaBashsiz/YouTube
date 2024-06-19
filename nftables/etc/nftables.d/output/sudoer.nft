@@ -1,0 +1,8 @@
+oifname "lo" counter accept;
+ct state related,established accept;
+icmp type echo-request counter accept;
+tcp dport 443 counter accept;
+tcp dport 80 counter accept;
+tcp dport 21 counter accept;
+tcp dport 53 counter accept;
+udp dport 53 counter accept;
