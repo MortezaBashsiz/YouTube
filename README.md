@@ -10,4 +10,6 @@ Here, I decided to list all my [YouTube](https://www.youtube.com/@MortezaBashsiz
 
 - [Linux System Engineering](https://github.com/MortezaBashsiz/YouTube/tree/main/Linux-System-Engineering "Linux System Engineering")
 
+- [Linux Debug](https://github.com/MortezaBashsiz/YouTube/tree/main/Debug "Linux Debug")
+
 - [ceph](https://github.com/MortezaBashsiz/YouTube/tree/main/ceph "ceph")
