@@ -9,7 +9,7 @@ do
 	SYN_RECV_=$(echo "${data_}" | grep SYN-RECV | awk '{print $1}')
 	TIME_WAIT_=$(echo "${data_}" | grep TIME-WAIT | awk '{print $1}')
 	echo -e "SYN_RECV = ${SYN_RECV_}\t   ESTAB = ${ESTAB_}\t   FIN-WAIT-1 = ${FIN_WAIT_1_}\t   FIN-WAIT-2 = ${FIN_WAIT_2_}\t   TIME_WAIT = ${TIME_WAIT_}"
-	sleep 0.1
+	sleep 0.5
 done
 #     41 ESTAB
 #      2 FIN-WAIT-1
