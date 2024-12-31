@@ -12,3 +12,5 @@
    - Disk capacity is full with important process
    - Working with Inodes
    - Differences between restart and reload
+4. [Scenario 4](https://youtu.be/FmfadhnWyiY)
+   - Performance issue because of maximum open files limitation
