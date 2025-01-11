@@ -14,5 +14,7 @@
    - Differences between restart and reload
 4. [Scenario 4](https://youtu.be/FmfadhnWyiY)
    - Performance issue because of maximum open files limitation
-4. [Scenario 5](https://youtu.be/CxbXnwnUNqQ)
-   - Accept/SYN Queue in kernel and performance impact
+5. [Scenario 5](https://youtu.be/CxbXnwnUNqQ)
+   - Accept&SYN Queue in kernel and performance impact
+6. [Scenario 6](https://youtu.be/XEMqlBTf2_4)
+   - Syn-Coockie and Syn-Flood
