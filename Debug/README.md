@@ -20,3 +20,5 @@
    - Syn-Coockie and Syn-Flood
 7. [Scenario 7](https://youtu.be/haxr3Lh8lxU)
    - Performance issue because of RAM and swap
+8. [Scenario 8](https://youtu.be/aO4Y5y3uMOk)
+   - Client can not access server port
